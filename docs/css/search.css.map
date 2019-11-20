@@ -1,0 +1,1 @@
+{"version":3,"sources":["search.sss"],"names":[],"mappings":"AACE,cACC,kCAAkC,AAClC,UAAW,CAFL","file":"search.css","sourcesContent":[".search\r\n\t&__cont\r\n\t\tbackground-color: var(--mainColor)\r\n\t\tcolor: #fff\r\n"],"sourceRoot":"/source/"}

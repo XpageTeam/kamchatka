@@ -1,21 +1,27 @@
 .task
-	&-cont 
-		background: var(--backgroundColor)
+	width: calc(100% - 440px)
+	margin-right: 40px
+
+	&-cont
 		padding: 70px 0 80px
 
+		&-inner
+			display: flex
+
 	&-title 
-		font-size: rem(26)
+		font-size: rem(22)
 		font-weight: 600
-		margin-bottom: 40px
+		margin-bottom: 30px
 
 	&__item
-		background: #fff
+		background: var(--backgroundColor)
+		border-radius: 5px
 
 		&-arrow
 			position: relative
-			size: 54px
+			size: 45px
 			border-radius: 50%
-			background: var(--mainColor)
+			background: var(--secondColor)
 			margin-left: auto
 			transition: transform .3s ease
 			flex: none
@@ -41,11 +47,7 @@
 			display: flex
 			align-items: center
 			cursor: pointer
-
-			figure
-				margin-right: 45px
-				width: 55px
-				flex: none
+			border-radius: 5px
 
 			&.js__animate
 
@@ -60,7 +62,7 @@
 			color: #9BAABB
 
 		&-bot
-			padding: 40px 150px
+			padding: 40px 50px
 			display: none
 
 			.text-page 
