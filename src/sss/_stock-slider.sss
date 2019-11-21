@@ -16,21 +16,21 @@
 
 
 	&__cont
-		// background: var(--secondColor)
+		background: var(--backgroundColor)
 		padding: 70px 0 80px
 
 	&__title
 		line-height: 1
 		transition: color .3s ease
-		padding: 10px 15px
-		border-radius: 25px
+		padding: 15px
+		border-radius: 5px
 
 		&:not(.active)
 			cursor: pointer
 			color: #000
 
 		&.active
-			background: var(--mainColor)
+			background: var(--secondColor)
 			color: #fff
 
 			+ .main-sliders__switcher
@@ -47,16 +47,17 @@
 
 		&-wrapper
 			display: flex
-			background: var(--backgroundColor)
-			border-radius: 25px
+			background: #fff
+			border-radius: 5px
 
 
 	&__switcher
 		margin: 0 35px
 
 .stock-slider
-	// position: relative
-	// overflow: hidden
+	
+	img
+		border-radius: 5px
 	
 	&:not(.active)
 		position: absolute 0
@@ -96,7 +97,7 @@
 	&-arrow
 		position: relative
 		size: 45px
-		background: var(--backgroundColor)
+		background: #fff
 		border-radius: 50%
 
 		&:before 
@@ -168,7 +169,7 @@
 		z-index: 10
 		background: var(--backgroundColor)
 		line-height: 1
-		border-radius: 25px
+		border-radius: 5px
 		padding: 7px 15px 6px 15px
 
 	&__title
@@ -183,7 +184,7 @@
 .history-item
 	display: flex
 	padding: 62px 67px
-	background: var(--backgroundColor)
+	background: #fff
 
 	&.js__open
 		.history-item__info-cont
@@ -218,7 +219,7 @@
 		position: relative
 		size: 45px
 		border-radius: 50%
-		background: #fff
+		background-color: var(--backgroundColor)
 		margin-top: 40px
 		cursor: pointer
 
@@ -235,7 +236,7 @@
 
 .event-item
 	display: flex
-	background: var(--backgroundColor)
+	background: #fff
 	flex: 1 1 auto
 
 	&:hover 
@@ -272,7 +273,7 @@
 	&__date
 		padding: 6px 15px 5px 15px
 		background: #E1E7ED
-		border-radius: 25px
+		border-radius: 5px
 		margin-top: 20px
 
 @media screen and (max-width: 1500px)

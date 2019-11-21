@@ -3,25 +3,31 @@
 		margin-top: 85px
 
 .footer
-	// background-image: url('../img/soti-bg.png')
-	// background-repeat: no-repeat
-	// background-position: center
 	background-color: var(--mainColor)
-	// background-size: cover
 	color: #fff
-	padding: 40px 0 85px
+	padding: 40px 0 45px
 
+	&-menu
+		column-count: 2
+		column-gap: 145px
+		
 	&__top
 		display: flex 
 		justify-content: space-between
 		align-items: center
 		padding: 0 0 20px
 
+
+
 	&__link
 		color: currentColor
+		display: block
+		letter-spacing: 0.02em
+		margin-bottom: 10px
+		transition: color .3s ease
 
-		&:not(:first-child)
-			margin-left: 55px
+		&:hover
+			color: var(--secondColor)
 
 	&__middle
 		display: flex 
@@ -32,32 +38,66 @@
 			align-items: center
 			line-height: 1
 
-			&:not(:first-child)
-				margin-left: 100px
+			a
+				text-decoration: none
 
+			svg
+
+				color: var(--secondColor)
+
+				path
+					color: currentColor
 	.ico
 		size: 13px
 		fill: currentColor
 		margin-right: 13px
 
-		&-phone
+
+
+		&-clock
+			a
+				color: rgba(255, 255, 255, 0.3)
+				font-size: rem(12)
+				margin: 5px 0 0 25px
+
+		&-email
+			margin-top: 20px
+
 
 
 	a 
 		color: currentColor
 
 	&__bot
+		position: relative
 		display: flex
 		justify-content: space-between
 		align-items: center
 		margin-top: 70px
+		padding-top: 40px
+
+
+		&:before
+			content: ''
+			display: block
+			height: 1px
+			width: 100vw
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translate3d(-50%,0,0)
+			background: rgba(0, 0, 0, 0.1)
+
+
 
 	&__copy
 		display: flex 
 		flex-direction: column
 
 		a
-			text-decoration: underline
+			font-size: rem(14)
+			color: rgba(0, 0, 0, 0.4)
+			text-decoration: none
 
 			&:hover
 				color: var(--secondColor)
@@ -69,6 +109,10 @@
 		justify-content: flex-end
 
 .developer
+	background-color: #583424
+	padding: 7px 12px
+	border-radius: 4px
+
 	&__img
 		display: flex
 

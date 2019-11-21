@@ -332,13 +332,7 @@ document.addEventListener("DOMContentLoaded", e => {
 	})
 
 	
-	$('.history-item__btn').click(function(){
-		let $this = $(this);
-
-		$this.closest('.history-item').toggleClass('js__open');
-		$this.closest('.history-item').find('.history-item__text-continuation').slideToggle();
-
-	})
+	
 
 	
 
