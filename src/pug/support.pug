@@ -8,16 +8,16 @@ html(lang="ru")
 	body.inner.loading
 		include inc/header.pug
 		main#content
-			.support-banner
-				figure.support-banner__img
-					img(src="img/photos/support-banner.jpg", alt="")
-				.support-banner__info-cont
-					.wrapper
-						.support-banner__info
-							h1 Услуги центра инжиниринга<br> и сертификации
-							.support-banner__info-text Помогаем занятому в производстве малому и среднему бизнесу реализовать на условиях софинансирования проекты по модернизации оборудования, расширению или созданию новых производств.
-							.support-banner__info-btn
-								a(href="").btn Получить консультацию
+			//- .support-banner
+			//- 	figure.support-banner__img
+			//- 		img(src="img/photos/support-banner.jpg", alt="")
+			//- 	.support-banner__info-cont
+			//- 		.wrapper
+			//- 			.support-banner__info
+			//- 				h1 Услуги центра инжиниринга<br> и сертификации
+			//- 				.support-banner__info-text Помогаем занятому в производстве малому и среднему бизнесу реализовать на условиях софинансирования проекты по модернизации оборудования, расширению или созданию новых производств.
+			//- 				.support-banner__info-btn
+			//- 					a(href="").btn Получить консультацию
 
 			.wrapper
 				.content
@@ -28,65 +28,145 @@ html(lang="ru")
 									a.bread-crumbs__link(href="#") Главная
 									a.bread-crumbs__link(href="#") Получить поддержку
 									span.bread-crumbs__this Услуги центра инжиниринга и сертификации
+
 					.content-main-cont
-						aside.content-aside
-							.support-banner__links
-								a(href="").support-banner__link Документы
-								a(href="").support-banner__link Конкурсы
-							.search-support-cont
-								form(action="")
-									.search-support
-										.search-support__title Введите ИНН и узнайте о вариантах поддержки Вашего бизнеса:
-										.search-support__input
-											input(type="text" placeholder="Введите Ваш ИНН")
-										.search-support__submit
-											input(type="submit" value="Найти").btn
-							include inc/calendar.pug
+						//- aside.content-aside
+						//- 	.support-banner__links
+						//- 		a(href="").support-banner__link Документы
+						//- 		a(href="").support-banner__link Конкурсы
+						//- 	.search-support-cont
+						//- 		form(action="")
+						//- 			.search-support
+						//- 				.search-support__title Введите ИНН и узнайте о вариантах поддержки Вашего бизнеса:
+						//- 				.search-support__input
+						//- 					input(type="text" placeholder="Введите Ваш ИНН")
+						//- 				.search-support__submit
+						//- 					input(type="submit" value="Найти").btn
+						//- 	include inc/calendar.pug
+
 						.content-main
+							.slider-inner
+								.main-slider
+									.swiper-container
+										.swiper-wrapper
+											a(href="#").main-slider__item.swiper-slide
+												picture
+													source(srcset="img/photos/main-banner.jpg" media="screen and (min-width: 481px)" data-main="data-main")
+													source(srcset="img/main-banner-mobile.jpg" media="screen and (max-width: 480px)")
+													img
+												.main-slider__item-cont
+													.main-slider__label Региональные новости
+													.main-slider__title Вадим Живулин: Средства, выделяемые<br> на сектор МСП до 2024 года - беспрецедентны.
+													.main-slider__date 05.02.2019
+											a(href="#").main-slider__item.swiper-slide
+												picture
+													source(srcset="img/photos/main-banner.jpg" media="screen and (min-width: 481px)" data-main="data-main")
+													source(srcset="img/main-banner-mobile.jpg" media="screen and (max-width: 480px)")
+													img
+												.main-slider__item-cont
+													.main-slider__label Региональные новости
+													.main-slider__title Вадим Живулин: Средства, выделяемые<br> на сектор МСП до 2024 года - беспрецедентны.
+													.main-slider__date 06.02.2019
+											a(href="#").main-slider__item.swiper-slide
+												picture
+													source(srcset="img/photos/main-banner.jpg" media="screen and (min-width: 481px)" data-main="data-main")
+													source(srcset="img/main-banner-mobile.jpg" media="screen and (max-width: 480px)")
+													img
+												.main-slider__item-cont
+													.main-slider__label Региональные новости
+													.main-slider__title Вадим Живулин: Средства, выделяемые<br> на сектор МСП до 2024 года - беспрецедентны.
+													.main-slider__date 07.02.2019
+
+
+									.main-slider__nav
+										.swiper-arrow.swiper-button-prev
+										.swiper-arrow.swiper-button-next
+								include inc/calendar.pug
+
+							.search
+								.support-variant__input-cont
+									label.label Введите ИНН и узнайте о вариантах поддержки вашего бизнеса:
+									.support-variant__input
+										form(action="http://kamchatka.xpager.ru/inn/")
+											input.input(type="text" placeholder="Введите Ваш ИНН..." name="INN" value="")
+											input.submit(type="submit" value="Найти")
+
+
+
+
 							.support-for-whom
 								.support-for-whom__title Для кого?
-								.support-for-whom__text Для производственных компаний, которым необходимы инженерно-исследовательские услуги, а также экономическая и маркетинговая поддержка как часть проекта развития. Вы относитесь к малому или среднему бизнесу, зарегистрированы и работаете на территории Челябинской области.
+								.support-for-whom__info
+									.text-page 
+										p Для производственных компаний, которым необходимы инженерно-исследовательские услуги, а также экономическая и маркетинговая поддержка как часть проекта развития. Вы относитесь к малому или среднему бизнесу, зарегистрированы и работаете на территории Челябинской области.
+										p Оперативно и в одном месте — бесплатные консультации экспертов по открытию, ведению и сопровождению бизнеса + решение задач, связанных с предоставлением государственных или муниципальных услуг.
+										p Полностью автоматизированный процесс работы с посетителями, в комфортных условиях и без очередей: ожидание — не больше 15 минут.
+										p Практически все услуги для вас — бесплатны. Вы оплачиваете только государственную пошлину, если она требуется.
 
-							.support-text
-								.support-text__title Что Вы получите?
-								.text-page
-									p Финансовую и интеллектуальную поддержку вашего проекта со стороны Регионального центра инжиниринга Челябинской области.
-									p 
-										b Как оказывается поддержка:
-									ol
-										li Вы обращаетесь к нам с запросом, готовите документы.
-										li Мы изучаем ваше предприятие: проводим анализ потенциала предприятия и аудит готовности к реализации проекта по нескольким направлениям.
-										li Подбираем исполнителей — компании, которые выполнят работы по вашему проекту. Ваша компания при этом оплачивает 20% полной стоимости работ, остальное подрядчику оплачивает Центр инжиниринга (но не более 950 тыс.руб в год)
-										li Подрядчик по трёхстороннему договору выполняет для вас работы по разработанному техническому заданию.
-									p 
-										b Какие задачи мы помогаем решать:
-									ol
-										li Получить инженерные услуги (мы покрываем до 80% от стоимости услуг, не более 600 тыс. руб):
-											ul
-												li по разработке и модернизации оборудования и продукции, оснастки;
-												li по созданию конструкторской и технологической документации;
-												li по проведению расчётов, испытаний;
-												li по разработке технологических процессов;
-												li по изготовлению опытных образцов продукции и оборудования.
-										li Провести экологический, технологический, энергетический и другой аудит производства, провести предсертификационную и предлицензионную проверку (до 80% от стоимости услуг, не более 100 тыс. руб).
-										li Разработать проект развития вашего предприятия (до 80% от стоимости услуг, не более 100 тыс. руб).
-										li Продвинуть ваш продукт на рынке, в том числе разработать логотип, зарегистрировать товарный знак, принять участие в профильных выставках. Мы оплачиваем до 80% от стоимости услуг, не более 100 тыс.руб.
-										li Защитить права на интеллектуальную собственность. Патентные услуги оказываются субъектам МСП на льготной основе. С ценами можно ознакомиться здесь.
-							.services
-								.services__list
-									each title, i in ['Разработка программы (проекта) развития предприятия', 'Инженерные услуги', 'Проведение технических аудитов', 'Маркетинговые услуги', 'Выращивание поставщиков', 'Сертификация продукции']
-										a(href="").services__item
-											figure.services__item-img
-												img(src="img/services-"+i+".svg", alt="")
-											.services__item-title=title
-											.services-arrow
+									.support-for-whom__img
+										img(src="img/photos/whom-img.jpg", alt="") 
 
-							.circle-list.circle-list--num
-								.circle-list__title Дополнительные возможности для Вас
-								.circle-list__list
-									.circle-list__item Кроме софинансирования работ и услуг, мы ведём открытый реестр малых инжиниринговых предприятий, многие из которых могут стать вашими партнёрами
-									.circle-list__item Проводим активную политику в области обучения: тренинги, семинары, вебинары, круглые столы, конференции
-									.circle-list__item Способствуем повышению внимания СМИ к вашей компании
+							.faq
+								.faq-title Услуги по каким направлениям<br> вы можете получить у нас?
+								.accordion
+									.accordion__item
+										.accordion__item-top
+											span Регистрация, кадастр и картография
+											.accordion__item-arrow
+										.accordion__item-bot
+											.text-page 
+												p Заявки принимаются постоянно при наличии средств на оказание поддержки. Информацию об этом можно уточнить у специалистов центра.
+									.accordion__item
+										.accordion__item-top
+											span Налоги и сборы
+											.accordion__item-arrow
+										.accordion__item-bot
+											.text-page 
+												p Заявки принимаются постоянно при наличии средств на оказание поддержки. Информацию об этом можно уточнить у специалистов центра.
+									.accordion__item
+										.accordion__item-top
+											span Фонд социального страхования
+											.accordion__item-arrow
+										.accordion__item-bot
+											.text-page 
+												p Заявки принимаются постоянно при наличии средств на оказание поддержки. Информацию об этом можно уточнить у специалистов центра.
+									.accordion__item
+										.accordion__item-top
+											span Судебные приставы
+											.accordion__item-arrow
+										.accordion__item-bot
+											.text-page 
+												p Заявки принимаются постоянно при наличии средств на оказание поддержки. Информацию об этом можно уточнить у специалистов центра.
+									.accordion__item
+										.accordion__item-top
+											span МВД
+											.accordion__item-arrow
+										.accordion__item-bot
+											.text-page 
+												p Заявки принимаются постоянно при наличии средств на оказание поддержки. Информацию об этом можно уточнить у специалистов центра.
+
+							section.supports-slider
+								.swiper-wrapper
+									.swiper-slide
+										.supports-slide
+											.supports-slide__img
+												img(src="img/photos/supports-slider-1.jpg", alt="")
+											.supports-slide__info
+												.supports-slide__label История успеха
+												.supports-slide__title ООО «Солар» ЗАО РПК<br> Системы управления
+												.supports-slide__text В 2015 году РИЦ-Челябинская область способствовал участию компаний Солар и РПК Системы управления в бизнес-миссии в Чехию. В рамках бизнес-миссии компании провели ряд B2B встреч и переговоров в г. Брно, а также обсудили нюансы сотрудничества с деловым партнером. Результатом делового общения стали заключенные контракты на совместные разработки. В частности между ЗАО РПК Системы управления и чешской компанией был заключен контракт на разработку принципиальной технологической схемы экспериментального образца комбинированной системы энергоснабжения.
+
+									.swiper-slide
+										.supports-slide
+											.supports-slide__img
+												img(src="img/photos/supports-slider-1.jpg", alt="")
+											.supports-slide__info
+												.supports-slide__label История успеха
+												.supports-slide__title ООО «Солар» ЗАО РПК<br> Системы управления
+												.supports-slide__text В 2015 году РИЦ-Челябинская область способствовал участию компаний Солар и РПК Системы управления в бизнес-миссии в Чехию. В рамках бизнес-миссии компании провели ряд B2B встреч и переговоров в г. Брно, а также обсудили нюансы сотрудничества с деловым партнером. Результатом делового общения стали заключенные контракты на совместные разработки. В частности между ЗАО РПК Системы управления и чешской компанией был заключен контракт на разработку принципиальной технологической схемы экспериментального образца комбинированной системы энергоснабжения.
+								.supports-slider__arrows
+									.swiper-button.swiper-button-prev
+									.swiper-button.swiper-button-next
 
 							.action
 								.action-title Модернизируйте производство<br> и получите новые возможности
@@ -134,7 +214,29 @@ html(lang="ru")
 																p Мероприятие соберет более 500 участников из 85 регионов России, среди которых будут представители органов исполнительной власти, ответственные за развитие малого и среднего в регионах Российской Федерации, а также руководители организаций инфраструктуры поддержки бизнеса
 																img(src="img/photos/video-img-0.jpg", align="left" alt="")
 
-							.faq
+							.supports-contacts
+								.supports-contacts__img
+									img(src="img/ico-no-photo.jpg", alt="")
+								.supports-contacts__info
+									.supports-contacts__top
+										.supports-contacts__title Исенко<br> Леонид Алексеевич
+									.supports-contacts__bot
+										.supports-contacts__el
+												.supports-contacts__post Руководитель центра инжиниринга и сертификации
+										.supports-contacts__el
+											.supports-contacts__label Телефон:
+											.supports-contacts__info
+												a(href="tel:83512140607") 8 351 214 06 07
+										.supports-contacts__el
+											.supports-contacts__label E-mail:
+											.supports-contacts__info
+												a(href="mailto: info@inzhener74.ru") info@inzhener74.ru
+										.supports-contacts__el
+											.supports-contacts__label ИНН:
+											.supports-contacts__info 124568793125
+
+
+							//- .faq
 								.faq-title FAQ: Частые вопросы и ответы
 								.accordion
 									.accordion__item
@@ -173,35 +275,35 @@ html(lang="ru")
 											.text-page 
 												p Заявки принимаются постоянно при наличии средств на оказание поддержки. Информацию об этом можно уточнить у специалистов центра.
 
-							.circle-list
-								.circle-list__title Для получения поддержки вам понадобятся
-								.circle-list__list
-									.circle-list__item заявка;
-									.circle-list__item анкета;
-									.circle-list__item информация о реализуемом проекте;
-									.circle-list__item справка из налоговой инспекции об  отсутствии задолженности по налогам, сборам, иным обязательным платежам, а также пеней, штрафов и иных финансовых санкций в бюджеты всех уровней и государственные внебюджетные фонды (не позднее одного месяца от даты подачи заявки);
-									.circle-list__item заверенные копии бухгалтерского баланса и отчета о финансовых результатах деятельность за последний отчетный год;
-									.circle-list__item заверенная копия формы «Сведения о среднесписочной численности работников за предшествующий календарный год» с отметкой налогового органа о принятии указанной формы.
+							//- .circle-list
+							//- 	.circle-list__title Для получения поддержки вам понадобятся
+							//- 	.circle-list__list
+							//- 		.circle-list__item заявка;
+							//- 		.circle-list__item анкета;
+							//- 		.circle-list__item информация о реализуемом проекте;
+							//- 		.circle-list__item справка из налоговой инспекции об  отсутствии задолженности по налогам, сборам, иным обязательным платежам, а также пеней, штрафов и иных финансовых санкций в бюджеты всех уровней и государственные внебюджетные фонды (не позднее одного месяца от даты подачи заявки);
+							//- 		.circle-list__item заверенные копии бухгалтерского баланса и отчета о финансовых результатах деятельность за последний отчетный год;
+							//- 		.circle-list__item заверенная копия формы «Сведения о среднесписочной численности работников за предшествующий календарный год» с отметкой налогового органа о принятии указанной формы.
 
-							.contacts-one
-								.contacts-one__top
-									.contacts-one__avatar
-										img(src="img/avatar.png", alt="")
-									.contacts-one__info
-										.contacts-one__name Исенко Леонид Алексеевич
-										.contacts-one__post руководитель
-								.contacts-one__bot
-									address.contacts-one__address
-										.contacts-one__label Телефон:
-										.contacts-one__link
-											a(href="tel: 8 351 214 06 07") 8 351 214 06 07
-									address.contacts-one__address
-										.contacts-one__label Электронная почта:
-										.contacts-one__link
-											a(href="mailto: info@inzhener74.ru") info@inzhener74.ru
-									address.contacts-one__address
-										.contacts-one__label Адрес:
-										.contacts-one__link 454000, г. Челябинск, ул. Российская, 110 к.1
+							//- .contacts-one
+							//- 	.contacts-one__top
+							//- 		.contacts-one__avatar
+							//- 			img(src="img/avatar.png", alt="")
+							//- 		.contacts-one__info
+							//- 			.contacts-one__name Исенко Леонид Алексеевич
+							//- 			.contacts-one__post руководитель
+							//- 	.contacts-one__bot
+							//- 		address.contacts-one__address
+							//- 			.contacts-one__label Телефон:
+							//- 			.contacts-one__link
+							//- 				a(href="tel: 8 351 214 06 07") 8 351 214 06 07
+							//- 		address.contacts-one__address
+							//- 			.contacts-one__label Электронная почта:
+							//- 			.contacts-one__link
+							//- 				a(href="mailto: info@inzhener74.ru") info@inzhener74.ru
+							//- 		address.contacts-one__address
+							//- 			.contacts-one__label Адрес:
+							//- 			.contacts-one__link 454000, г. Челябинск, ул. Российская, 110 к.1
 						
 
 

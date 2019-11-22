@@ -211,6 +211,24 @@ document.addEventListener("DOMContentLoaded", e => {
 	      },
 	});
 
+	var supportsSwiper = new Swiper('.supports-slider', {
+		effect: "fade",
+		slidesPerView: 1,
+		loop: true,
+		roundLengths: true,
+		a11y: false,
+		navigation: {
+			nextEl: '.supports-slider__arrows .swiper-button-next',
+			
+			prevEl: '.supports-slider__arrows .swiper-button-prev',
+		},
+		fadeEffect: {
+		    crossFade: true
+		},
+		autoHeight: true,
+
+	});
+
 	$('.lk-events__item-btn').click(function(){
 		var $this = $(this);
 

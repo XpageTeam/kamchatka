@@ -29,6 +29,9 @@
 @import "search-page.sss"
 @import "_paginator.sss"
 @import "search.sss"
+@import "404.sss"
+@import "supports-slider.sss"
+@import "supports-contacts.sss"
 
 
 
@@ -446,6 +449,17 @@
 
 
 
+.event-detail
+	.date
+		border-radius: 5px
+		background-color: var(--secondColor)
+		color: #fff
+		font-size: rem(13)
+		padding: 9px 17px 8px
+		display: inline-block
+		line-height: 1
+
+
 .news-page
 	margin-bottom: 20px
 
@@ -564,19 +578,16 @@
 				width: 35.8%
 				box-sizing: border-box
 
+
 				a
 					border-bottom: 1px solid var(--main-color)
 
-				.date, span
+				span
 					background: var(--secon-color)
 					width: 10%
 					min-width: 125px
 					margin-right: 85%
 					display: inline-block
-					//margin-right: 240px
-
-				.date
-					font-size: 25px
 
 				h2
 					font-size: 35px
@@ -584,6 +595,7 @@
 					text-transform: uppercase
 					line-height: 50px
 					display: none
+
 
 	.decorated-title
 

@@ -1,0 +1,81 @@
+.p-404
+	display: flex
+	align-items: center
+
+	&-cont
+		display: flex
+		flex-direction: column
+		justify-content: center
+		min-height: calc(100vh - 821px)
+
+	&__number
+		margin-right: 150px 
+
+
+
+	&__text
+		&-title
+			font-size: rem(24)
+			font-weight: 500
+			margin-bottom: 40px
+
+	&-links
+		display: flex
+		align-items: center
+
+		&__home
+			margin-right: 28px
+			size: 50px
+			border-radius: 5px
+			background-color: var(--secondColor)
+			background-image: url('../img/ico-home.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+
+
+		&__text
+			font-size: rem(14)
+
+
+@media (max-width: 1300px)
+	
+	.p-404__number
+		margin-right: 75px
+
+
+@media (max-width: 1200px)
+	
+	.p-404__number
+		max-width: 400px
+
+
+	.p-404__text-title
+		margin-bottom: 25px
+
+@media (max-width: 1000px)
+	
+	.p-404
+		flex-direction: column
+
+		&__number
+			margin: 0 0 30px 0
+
+
+		&__text
+			&-title
+				text-align: center
+
+		&-links
+			justify-content: center
+
+
+@media (max-width: 1000px)
+
+	.p-404-cont
+		height: auto
+
+	.p-404__number
+		max-width: 265px
+
+	.p-404__text-title
+		font-size: 1.3em

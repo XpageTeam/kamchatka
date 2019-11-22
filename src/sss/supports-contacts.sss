@@ -1,0 +1,118 @@
+.supports-contacts
+	display: flex
+	align-items: flex-start
+	background-color: #fff
+	padding: 45px 40px
+
+	&-cont
+		padding: 50px 0 90px
+
+		+ .forms
+			margin-bottom: 30px
+
+
+	&__img
+		flex: none
+		margin-right: 40px
+
+		img
+			display: block
+
+	&__info
+		flex: 1 1 auto
+
+	&__bot
+		display: flex
+		// justify-content: space-between
+
+		
+		.supports-contacts__el
+			&:first-child
+				max-width: 257px
+				width: 100%
+
+
+	&__title
+		font-size: em(18)
+		margin-bottom: 15px
+
+	&__post
+		font-size: em(14)
+		color: #9BAABB
+		font-style: italic
+
+	&__label
+		font-size: em(14)
+		color: #9BAABB
+		margin-bottom: 10px
+
+	&__info
+		display: flex
+		flex-direction: column
+		font-size: em(14)
+
+		a
+			color: #000
+
+			&:hover
+				color: var(--second-color)
+
+	&__el
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		margin-right: auto
+
+		&:not(:first-child)
+			margin-left: 20px
+
+
+		
+
+
+@media screen and (max-width: 1500px)
+	
+	.supports-contacts-cont
+		padding: 45px 0
+
+@media screen and (max-width: 1200px)
+	
+	.supports-contacts__el:first-child
+		margin-right: 50px
+
+@media screen and (max-width: 1000px)
+	
+	..sss
+		flex-wrap: wrap
+
+		&__el
+			&:nth-child(1)
+				width: 100%
+				border: 0
+				margin: 0 0 20px 0
+
+	.supports-contacts__bot
+		flex-direction: column
+
+	.supports-contacts__el
+		margin: 0 0 20px
+
+@media screen and (max-width: 667px)
+
+	.supports-contacts
+		padding: 20px
+
+		&__el
+			width: 100%
+			margin-bottom: 15px
+
+			&:not(:first-child)
+				margin-left: 0
+
+		&__img
+			margin-bottom: 20px
+
+
+
+	
+

@@ -1,42 +1,32 @@
-.inner
-	.content-aside
-		.calendar
-			&-filter
+.calendar
+	flex: 1 1 auto
 
-				&__select
-					width: calc((100% - 40px * 2) / 2)
-	.calendar
-		background: #e9eff4
+	&-top
+		padding: 0
+		background-color: var(--mainColor)
+		border-radius: 5px
 
-.main
-	.calendar
-		&-top
-			padding: 0
+		&__filter
+			padding: 40px
+			border-radius: 5px
 
-			&__filter
-				background-color: var(--mainColor)
-				padding: 40px
-				border-radius: 5px
 
-		&__title
-			margin-bottom: 30px
-
-		&-body-cont
-			border: 1px solid var(--borderColor)
-			border-right: 0 0 5px 5px
+	&-body-cont
+		border: 1px solid var(--borderColor)
+		border-right: 0 0 5px 5px
 
 .calendar
 	display: flex
 	flex-direction: column
 
 	&__title
-		font-weight: 600
+		font-weight: 500
 		font-size: rem(22)
-		margin-bottom: 25px
+		padding: 30px 30px 0 30px
+		text-align: center
+		color: #fff
 
-	&-top 
-		padding: 35px 45px
-		margin-bottom: auto
+	&-top
 
 		&__filter
 			display: flex 
@@ -54,11 +44,19 @@
 
 	&-filter
 		display: flex
-		margin: 0 0 0 -40px
+		justify-content: space-between
 
 		&__select
-			width: calc((100% - 40px * 2) / 2)
-			margin: 0 0 0 40px
+			flex: 1 1 auto
+
+			.selectize-dropdown-content
+				max-height: 200px
+				overflow-y: auto
+
+			&:not(:first-child)
+				margin-left: 20px
+				max-width: 130px
+
 
 			select
 				width: 100%
@@ -70,6 +68,8 @@
 				background-color: #fff
 				background-position: center right 20px
 				background-repeat: no-repeat
+				flex: none
+
 
 
 			input 
@@ -78,7 +78,13 @@
 			.item
 				width: 100%
 				height: 100%
-				padding: 12px 25px
+				padding: 12px 45px 12px 25px
+				background-repeat: no-repeat
+				border-radius: 5px
+				line-height: 1
+
+			.option
+				padding: 12px 45px 12px 25px
 
 			.selectize-input
 				padding: 0 !important
@@ -86,6 +92,11 @@
 				border: 0 !important
 				background: #fff !important
 				box-shadow: none !important
+
+		&__item
+			&:not(:first-child)
+				margin-left: 40px
+
 
 
 	&-body
@@ -100,7 +111,7 @@
 			background: #fff
 			margin: 1px
 			padding: 25px 35px
-			margin-top: auto
+			margin-top: -2px
 
 			&__title
 				text-align: center
@@ -146,22 +157,20 @@
 			background: #e9eff4
 			background: var(--mainColor)
 
-.content-main
-	.calendar
-		&-top
-			display: flex
-			justify-content: center
-			align-items: center
+// .content-main
+// 	.calendar
+// 		&-top
+// 			display: flex
+// 			justify-content: center
+// 			align-items: center
 
-		&__title
-			margin: 0 115px 0 0
+// 		&__title
+// 			margin: 0 115px 0 0
 
-		.selectize-input
-			padding-right: 50px !important
 
-		&-body
-			&-cont
-				padding: 50px 120px
+// 		&-body
+// 			&-cont
+// 				padding: 50px 120px
 
 @media screen and (max-width: 1300px)
 	

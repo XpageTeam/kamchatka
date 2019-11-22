@@ -1,13 +1,14 @@
 .title-block
-	padding: 55px 0 60px
+
+	&__cont
+		padding: 55px 0 60px
 
 	h1 
-		font-size: rem(30)
-		line-height: 40px
-		font-weight: 600
+		font-size: rem(24)
+		line-height: calc(29 / 24)
 
 	&__crumbs
-		margin-bottom: 6px
+		margin-bottom: 15px
 			
 .bread-crumbs
 	ul 
@@ -16,27 +17,32 @@
 	&__link, &__this
 		font-size: rem(14)
 		font-weight: 300
+		color: #BFCAD4
 
 	&__link
 		position: relative
-		padding-right: 45px
-		color: #C39367
+		padding-right: 40px
 		line-height: 1
 		text-decoration: underline
 		text-decoration-color: transparent
 		transition: text-decoration-color .3s ease
 
+		&:first-child
+			color: var(--secondColor)
+
 		&:hover 
 			text-decoration-color: currentColor
 
 		&:after
-			content: '/'
-			position: absolute
-			right: 16px
-			top: calc(50% - 7px)
-			size: 5px 14px
+			content: ''
 			display: block
-			color: #CCCEDA
+			position: absolute
+			right: 17px
+			top: calc(50% - 3px)
+			size: 6px
+			transform: rotate(45deg)
+			border-top: 1px solid #BFCAD4
+			border-right: 1px solid #BFCAD4
 
 
 @media screen and (max-width: 1500px)

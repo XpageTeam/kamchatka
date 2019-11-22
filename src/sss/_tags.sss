@@ -8,17 +8,19 @@
 		display: inline-block
 		margin: 0 15px 15px 0
 		padding: 9px 16px
-		background: var(--backgroundColor)
-		border-radius: 18px
+		border-radius: 5px
 		line-height: 1
 		font-size: 13px
+		border: 1px solid var(--borderColor)
 
 		&:first-child
 			background: none
 			padding: 0
+			border: 0
 
 		&.active
-			background: var(--mainColor)
+			background: var(--secondColor)
+			border-color: var(--secondColor)
 			color: #fff
 
 	&-mobile

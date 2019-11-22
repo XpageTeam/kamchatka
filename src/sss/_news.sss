@@ -1,15 +1,16 @@
 @supports (display: grid)
 	.news
-		display: grid
-		grid-gap: 2rem 1.875rem
-		grid-template-columns: repeat(3,1fr)
+
+		&__list
+			display: grid
+			grid-gap: 50px
+			grid-template-columns: repeat(3,1fr)
 
 		&-slider
 			width: 100% !important
 
 		&-slider-container
 			grid-column: span 2
-			grid-row: span 2
 			margin-bottom: 0 !important
 
 .main
@@ -47,7 +48,7 @@
 
 		&__label
 			padding: 15px
-			border-radius: 25px
+			border-radius: 5px
 			background: var(--backgroundColor)
 			line-height: 1
 			color: #000
@@ -62,7 +63,6 @@
 
 		&__date 
 			font-size: rem(14)
-			color: #CAB1A6
 			margin-top: 15px
 
 
@@ -82,10 +82,6 @@
 			&-cont
 				display: flex
 				width: 100%
-				background-color: var(--mainColor)
-				background-image: url('../img/soti-bg.png')
-				background-position: center
-				background-repeat: no-repeat
 				color: #fff
 				padding: 25px 25px 40px 60px
 
@@ -95,11 +91,7 @@
 				margin-right: 40px
 				flex: none
 
-				.ico
-					height: 100%
-
-				svg 
-					fill: #fff
+		
 			
 
 		&__item
@@ -127,20 +119,27 @@
 		position: relative
 		display: flex
 		flex-direction: column
-		justify-content: space-between
 		align-items: flex-start
-		background-color: var(--backgroundColor)
-		padding: 40px 50px
-		flex: 1 1 auto
-		overflow: hidden
+		border-radius: 5px
 
-		&:hover
-			.news__item-logo
-				animation: start 2s forwards
 
-		// &:not(:hover)
-		// 	.news__item-logo
-		// 		animation: start 2s forwards
+
+		&-info
+			border: 1px solid var(--borderColor)
+			border-radius: 0 0 5px 5px
+			border-top: 0
+			padding: 40px
+			display: flex
+			flex-direction: column
+			flex: 1 1 auto
+
+		&-img
+			width: 100%
+
+			img
+				display: block
+				width: 100%
+
 
 
 		&-logo
@@ -173,24 +172,33 @@
 			font-weight: 500
 			width: 100%
 			z-index: 10
+			margin-bottom: auto
+
 
 		&-date 
 			margin-top: 20px
+			color: #BFCAD4
+			font-size: rem(14)
+			font-weight: 500
 
 	&__list
-		display: flex 
-		flex-wrap: wrap
-		margin: 0 0 -40px -40px
-
 		&-btn
-			width: 100%
-			text-align: center
+			margin-top: 85px
+			display: flex
+			justify-content: center
+	// 	display: flex 
+	// 	flex-wrap: wrap
+	// 	margin: 0 0 -40px -40px
+
+	// 	&-btn
+	// 		width: 100%
+	// 		text-align: center
 
 
-		.news__item
-			width: calc((100% - 40px * 3) / 3)
-			margin: 0 0 40px 40px
-			flex: none
+	// 	.news__item
+	// 		width: calc((100% - 40px * 3) / 3)
+	// 		margin: 0 0 40px 40px
+	// 		flex: none
 
 
 	

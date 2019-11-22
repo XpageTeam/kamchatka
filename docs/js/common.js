@@ -10749,6 +10749,24 @@ document.addEventListener("DOMContentLoaded", function (e) {
 		}
 	});
 
+	var supportsSwiper = new _swiper2.default('.supports-slider', {
+		effect: "fade",
+		slidesPerView: 1,
+		loop: true,
+		roundLengths: true,
+		a11y: false,
+		navigation: {
+			nextEl: '.supports-slider__arrows .swiper-button-next',
+
+			prevEl: '.supports-slider__arrows .swiper-button-prev'
+		},
+		fadeEffect: {
+			crossFade: true
+		},
+		autoHeight: true
+
+	});
+
 	(0, _jquery2.default)('.lk-events__item-btn').click(function () {
 		var $this = (0, _jquery2.default)(this);
 

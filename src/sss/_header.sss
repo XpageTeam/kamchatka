@@ -29,6 +29,21 @@
 	position: relative
 	z-index: 10
 
+	.lc-links
+		display: flex
+		align-items: center
+
+		a
+			&:first-child
+				background-color: #fff
+				color: rgba(0, 0, 0, 0.3)
+
+			&:not(:last-child)
+				margin-right: 10px
+
+	.option
+		padding: 5px 45px
+
 	&-search
 		position: relative
 
@@ -167,6 +182,24 @@
 
 		&__item
 
+			&:nth-child(1)
+
+				> a
+					position: relative
+					padding-left: 0
+					display: flex
+					align-items: center
+
+					&:before
+						content: ''
+						display: inline-block
+						size: 18px 15px
+						background-image: url('../img/burger.svg')
+						background-repeat: no-repeat
+						background-position: 50%
+						background-size: contain
+						margin-right: 25px
+
 			a 
 				position: relative
 
@@ -180,21 +213,23 @@
 					transform: rotate(45deg)
 					opacity: 0
 					transition: opacity .3s ease
-			&:hover
-				> a
-					background: #7C523F
-					&:after 
-						opacity: 1
 
-				.submenu
-					opacity: 1
-					pointer-events: all
+			&.js__has-submenu
+				&:hover
+					> a
+
+						&:after 
+							opacity: 1
+
+					.submenu
+						opacity: 1
+						pointer-events: all
 
 		&__link
 			white-space: nowrap
 			color: currentColor
 			display: inline-block
-			padding: 27px 43px
+			padding: 27px 25px
 
 .submenu
 	position: absolute

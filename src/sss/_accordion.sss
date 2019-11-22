@@ -1,8 +1,30 @@
+.faq
+	position: relative
+	padding: 75px 0
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 50%
+		bottom: 0
+		width: 100vw
+		background-color: var(--backgroundColor)
+		z-index: -1
+		transform: translate3d(-50%,0,0)
+
+	&-title 
+		font-size: rem(22)
+		font-weight: 600
+		margin-bottom: 40px
+
+
 .accordion
 	&__item
 
 		&:not(:first-child)
-			margin-top: 20px
+			margin-top: 25px
 
 		&.js__open
 			.accordion__item-arrow
@@ -10,21 +32,25 @@
 
 		&-bot
 			display: none
-			padding: 30px 50px 20px
+			padding: 30px 75px 20px
 			border: 1px solid var(--backgroundColor) 
 			
 		&-top
-			background: var(--backgroundColor)
-			padding: 25px 50px
+			background: #fff
+			padding: 27px 50px 27px 75px
 			font-size: rem(18)
-			font-weight: 600
 			cursor: pointer
-			display: flex 
+			display: flex
+			align-items: center
 			justify-content: space-between
+			border-radius: 5px
+			background-image: url('../img/ico-logo-min.svg')
+			background-position: left 32px center
+			background-repeat: no-repeat
 			
 		&-arrow
 			position: relative
-			size: 54px
+			size: 20px
 			border-radius: 50%
 			background: #fff
 			margin-left: 20px
