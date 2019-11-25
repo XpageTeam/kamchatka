@@ -2,15 +2,6 @@
 	display: flex
 	margin-bottom: 50px
 
-// 	.calendar-top
-// 		flex-direction: column
-
-// 	.calendar__title
-// 		margin: 0 0 20px !important
-
-// 	.calendar-body-cont
-// 		padding: 25px 35px !important
-
 .main-slider
 	width: calc(100% - 480px)
 	position: relative
@@ -19,8 +10,16 @@
 	border-radius: 5px
 	overflow: hidden
 
+
 	.swiper-wrapper
 		height: auto !important
+
+	.swiper-container
+		display: flex
+
+	.swiper-arrow
+		&:before
+			filter: invert(1)
 
 	&__nav 
 		position: absolute
@@ -100,9 +99,6 @@
 		&__item-cont
 			padding: 30px
 
-		&__nav
-			top: 30px
-			right: 30px
 
 @media screen and (max-width: 1400px)
 
@@ -110,20 +106,28 @@
 	.main-slider
 		width: calc(100% - 445px)
 
-		+ .calendar
-			margin-left: auto
+
+	.slider-inner
+		.main-slider
+			width: calc(100% - 400px)
+
 
 @media screen and (max-width: 1300px)
 
 	.main-slider
 		width: calc(100% - 415px)
 
-
-
+		&__nav
+			right: 35px
+			bottom: 35px
+	
+	.slider-inner 
+		.main-slider
+			width: calc(100% - 350px)
 
 @media screen and (max-width: 1200px)
 	.main-slider
-		width: calc(100% - 300px)
+		width: 100%
 
 		+ .calendar
 			margin-left: 20px
@@ -132,9 +136,9 @@
 		&__item-cont
 			padding: 20px
 
-		&__nav 
-			top: 20px
-			right: 20px
+		&__nav
+			right: 25px
+			bottom: 25px
 
 		&__title
 			font-size: 1.3rem
@@ -142,6 +146,14 @@
 
 		&__label
 			padding: 10px
+
+	.main-slider-container
+		flex-direction: column
+		margin-bottom: 25px
+
+
+
+
 
 @media screen and (max-width: 1000px)
 
@@ -164,9 +176,7 @@
 		&.swiper-button-next
 			margin-left: 10px
 
-		&-cont
-			margin-left: -20px
-			margin-right: -20px
+
 		
 		&__item
 

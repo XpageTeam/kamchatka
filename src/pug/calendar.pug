@@ -19,8 +19,29 @@ html(lang="ru")
 							.title-block__title
 								h1 Календарь мероприятий
 					.content-main-cont
+						include inc/tags.pug
+						
 						.content-main
-							include inc/tags.pug
+							.calendar-events__elements
+								a.calendar-events__el(href="#")
+									.calendar-events__el-info
+										.calendar-events__el-title Консультации по юридическим вопросам
+										.calendar-events__el-time время: 10:00-17:00
+									.calendar-events__el-status
+										.status.status--open Регистрация открыта
+									.btn--arrow
+
+								-for (let i = 0; i < 10; i++)
+									a.calendar-events__el(href="#")
+										.calendar-events__el-info
+											.calendar-events__el-title Консультации по юридическим вопросам
+												.calendar-events__el-time время: 10:00-17:00
+										.calendar-events__el-status
+											.status.status--close Регистрация закрыта
+										.btn--arrow
+
+
+						aside.content-aside
 							.calendar
 								.calendar-top
 									.calendar__title Календарь мероприятий
@@ -89,66 +110,7 @@ html(lang="ru")
 											span.calendar__cell 30
 											span.calendar__cell 31
 
-							.events
-								.events__list
-									.events__item
-										.events__item-top
-											.events__item-title Консультации по юридическим вопросам
-											.events__item-date 06.02.2019
-
-										.events__item-bot
-											.text-page
-												p Есть вопросы к юристу, но не знаешь к кому обратиться?<br> Сколько стоит консультация для предпринимателя?<br> Где найти юриста компетентного в вопросах бизнеса? 
-												p 5 апреля и каждую пятницу в "Территории Бизнеса" проходят личные консультации юристов. Бесплатно, но по предварительной записи!
-											a(href="").btn Подробнее
-									.events__item
-										.events__item-top
-											.events__item-title Консультация бухгалтера
-											.events__item-date 06.02.2019
-
-										.events__item-bot
-											.text-page
-												p 5 апреля вы можете бесплатно проконсультироваться у бухгалтера и получить ответы на вопросы:
-												ul
-													li Выбора системы налогообложения;
-													li Разработки проекта учетной политики;
-													li Расчета заработной платы;
-													li Взносов и налогов;
-													li Учета банковских операций; 
-													li Учета дебиторки и кредиторки;
-													li Учета материальных запасов и основных средств.
-												p В вашем распоряжении — глубокие знания в области налогов, бухучета, планирования, финансового анализа.
-
-											a(href="").btn Подробнее
-									.events__item
-										.events__item-top
-											.events__item-title Консультации по юридическим вопросам
-											.events__item-date 06.02.2019
-
-										.events__item-bot
-											.text-page
-												p Есть вопросы к юристу, но не знаешь к кому обратиться?<br> Сколько стоит консультация для предпринимателя?<br> Где найти юриста компетентного в вопросах бизнеса? 
-												p 5 апреля и каждую пятницу в "Территории Бизнеса" проходят личные консультации юристов. Бесплатно, но по предварительной записи!
-											a(href="").btn Подробнее
-									.events__item
-										.events__item-top
-											.events__item-title Консультация бухгалтера
-											.events__item-date 06.02.2019
-
-										.events__item-bot
-											.text-page
-												p 5 апреля вы можете бесплатно проконсультироваться у бухгалтера и получить ответы на вопросы:
-												ul
-													li Выбора системы налогообложения;
-													li Разработки проекта учетной политики;
-													li Расчета заработной платы;
-													li Взносов и налогов;
-													li Учета банковских операций; 
-													li Учета дебиторки и кредиторки;
-													li Учета материальных запасов и основных средств.
-												p В вашем распоряжении — глубокие знания в области налогов, бухучета, планирования, финансового анализа.
-
-											a(href="").btn Подробнее
+							
 
 
 							

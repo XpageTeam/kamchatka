@@ -59,10 +59,35 @@
 		&-top 
 			margin-bottom: 15px
 
+@media screen and (max-width: 1400px)
+	
+	.partners__item
+		padding: 20px
+
+
 @media screen and (max-width: 1200px)
 
-	.partners-item
-		padding: 10px
+	.partners
+		&__list
+			margin: 0 0 -20px -20px
 
-		&__img
-			margin-right: 15px
+		&__item
+			padding: 10px
+			margin: 0 0 20px 20px
+			width: calc((100% - 20px * 3) / 3)
+
+			&-img
+				margin-right: 10px
+				max-width: 100px
+				width: 100%
+
+
+@media screen and (max-width: 1000px)
+	
+	.partners__item
+		width: calc((100% - 60px)/2)
+
+@media screen and (max-width: 667px)
+	
+	.partners__item
+		width: 100%

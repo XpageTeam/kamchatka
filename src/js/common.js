@@ -128,14 +128,15 @@ document.addEventListener("DOMContentLoaded", e => {
 	});
 
 	let swiperStorySuccess = new Swiper(".story-success .swiper-container", {
-		slidesPerView: 1,
+		slidesPerView: 3,
+		spaceBetween: 40,
 		a11y:{
 			enabled: document.body.classList.contains("special__body")
 		},
 		loop: true,
 		roundLengths: true,
 		// autoplay: true,
-		autoHeight: true,
+		// autoHeight: true,
 		navigation: {
 	        nextEl: '.story-success .swiper-button-next',
 	        prevEl: '.story-success .swiper-button-prev',

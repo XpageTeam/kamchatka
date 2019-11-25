@@ -18,10 +18,13 @@ $(_ => {
 	});
 
 	var menuClone = $('.head-menu__list').clone();
-	var socClone = $('header .soc').clone();
+	var socClone = $('.footer .soc').clone();
+	var contClone = $('header .head-contacts-el').clone();
 
 	$('.mobile-menu').append(menuClone);
+	$('.mobile-menu').append(contClone);
 	$('.mobile-menu').append(socClone);
+
 
 	// $('.head-menu__item').find('ul').closest('li').addClass('js__has-submenu');
 

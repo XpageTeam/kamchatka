@@ -1,5 +1,5 @@
 .task
-	width: calc(100% - 440px)
+	width: calc(100% - 400px)
 	margin-right: 40px
 
 	&-cont
@@ -93,11 +93,22 @@
 				margin-right: 25px
 
 		&-bot
-			padding: 30px 110px 40px
+			padding: 30px 25px 40px
 
 		&-arrow 
 			width: 46px
 			height: 46px
+
+@media screen and (max-width: 1000px)
+	
+	.task-cont-inner
+		flex-direction: column
+
+	.task
+		width: 100%
+		margin-right: 0
+		margin-bottom: 30px
+
 
 @media screen and (max-width: 660px)
 

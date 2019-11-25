@@ -1,0 +1,459 @@
+.status
+	border-radius: 5px
+	color: #fff
+	font-weight: 500
+	line-height: 1
+	font-size: rem(14)
+	transition: background .5s ease, color .5s ease
+	padding: 13px 17px
+	border: 0
+	display: inline-block
+
+	&--close
+		color: #B8C1CB
+		border: 1px solid #B8C1CB
+		background-color: transparent
+
+
+	&--open
+		background-color: #C39367
+		color: #fff
+		border-color: #C39367
+		background-color: #C39367
+
+.btn
+	border-radius: 5px
+	background-color: var(--second-color)
+	color: #fff
+	font-weight: 500
+	line-height: 1
+	font-size: rem(14)
+	transition: background .5s ease, color .5s ease
+	padding: 20px 17px
+	border: 0
+	cursor: pointer
+	display: inline-block
+	user-select: none
+
+	&--arrow
+		size: 42px
+		border-radius: 5px
+		background-color: var(--secondColor)
+		background-image: url('../img/ico-btn-arrow.svg')
+		background-position: center
+		background-repeat: no-repeat
+		flex: none
+
+
+.calendar-events
+	display: flex
+
+	&__elements
+		display: flex
+		flex-direction: column
+		flex: 1 1 auto
+
+	&__el
+		background-color: var(--backgroundColor)
+		padding: 38px 47px
+		display: flex
+		align-items: center
+		border-radius: 5px
+		margin-bottom: 15px
+
+		&:hover
+			.btn--arrow
+				background-color: #ff391c
+
+
+		&-status
+			margin-left: auto
+			flex: none
+
+			.btn
+				&:hover
+					background-color: transparent
+					color: var(--second-color)
+
+		.btn
+			
+			
+			&--arrow
+				margin-left: 54px
+
+
+		&-title
+			font-size: rem(18)
+			font-weight: 500
+
+		&-time
+			font-weight: 500
+			font-size: rem(13)
+			text-transform: uppercase
+
+			color: #9F9F9F
+			margin-top: 15px
+
+		&-info
+			margin-right: 20px
+			max-width: 700px
+			width: 100%
+
+
+
+
+
+
+
+	&__date
+		width: 100px
+		flex: none
+		position: sticky
+		top: 0
+
+		&-num
+			font-size: rem(36)
+			text-transform: uppercase
+			margin-bottom: 5px
+
+		&-month
+			font-size: rem(13)
+			text-transform: uppercase
+			font-weight: 500
+			line-height: 1
+			margin-bottom: 10px
+
+		&-weekday
+			font-size: rem(13)
+			text-transform: uppercase
+			color: var(--second-color)
+
+	&-cont
+		padding: 100px 0
+
+	&__aside
+		flex: 1 1 auto
+		border-radius: 5px
+		background-color: var(--main-color)
+		color: #fff
+		padding: 50px 48px
+		margin-right: 54px
+		display: none
+
+	&__title
+		font-size: 22px
+		text-align: center
+		margin-bottom: 50px
+
+
+
+
+	&__info
+		position: relative
+		// width: calc(100% - 440px - 54px)
+		flex: 1 1 auto
+
+		
+
+		&-title
+			font-weight: 300
+			font-size: rem(40)
+			letter-spacing: 0.02em
+
+		&-top
+			display: flex
+			justify-content: space-between
+			margin-bottom: 35px
+
+
+			.btn.btn--white
+				display: flex
+				align-items: center
+				cursor: pointer
+
+				&:after
+					content: ''
+					display: inline-block
+					size: 18px 16px
+					background-image: url('../img/ico-burger-red.svg')
+					background-repeat: no-repeat
+					background-position: center
+					background-size: contain
+					margin-left: 20px
+					transition: background .5s ease
+
+				&:hover
+					&:after
+						background-image: url('../img/ico-burger.svg')
+
+	&-cont
+		background-color: var(--background-color)
+
+
+	&__month-el
+		display: flex
+		justify-content: space-between
+		padding: 12px 18px
+		border-radius: 5px
+		transition: background .5s ease
+		color: #fff
+		font-size: rem(14)
+		line-height: 1
+
+		&.active
+			background-color: var(--second-color)
+
+		&:hover
+			background-color: #20274e
+
+
+	&__list
+		position: relative
+		max-height: 560px
+		overflow-y: auto
+		// border-left: 1px solid #D6D8E3
+		-webkit-overflow-scrolling: touch
+		// padding-left: 3px
+
+
+
+
+		&::-webkit-scrollbar 
+			width: 52px
+
+		&::-webkit-scrollbar-track
+			border-radius: 0
+			background: #D6D8E3
+			border-left: 48px solid #fff
+
+		&::-webkit-scrollbar-thumb 
+			border-radius: 0
+			background: var(--second-color)
+			border-left: 48px solid #fff
+
+	&__item
+		position: relative
+		display: flex
+		align-items: flex-start
+		padding-left: 40px
+
+		&--not-found
+			padding-left: 0
+			font-size: em(18)
+
+			&:before, &:after
+				display: none !important
+
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 1px
+			left: 1px
+			size: 6px
+			background-color: var(--second-color)
+			transform: rotate(45deg)
+			z-index: 10
+
+		&:after
+			content: ''
+			width: 3px
+			height: 100%
+			background-color: #D6D8E3
+			position: absolute
+			top: 0
+			left: 3px
+
+
+
+
+
+@media screen and (max-width: 1500px)
+	
+	.calendar-events-cont
+		padding: 35px 0
+
+	.calendar-events__info-title
+		font-size: 2rem
+
+	.calendar-events__el
+		padding: 25px 30px
+		margin-bottom: 10px
+
+	.calendar-events__list
+		max-height: 350px
+
+
+@media screen and (max-width: 1300px)
+	
+	.calendar-events
+
+		align-items: flex-start
+
+		&__info
+			width: calc(100% - 240px)
+
+			&-top
+				margin-bottom: 20px
+
+
+		&__aside
+			padding: 25px
+			margin-right: 30px
+
+		&__month-el
+			padding: 10px
+
+	
+		&__el-info
+			max-width: 600px
+
+
+
+
+
+@media screen and (max-width: 1200px)
+	
+	.calendar-events__el-info
+		max-width: 363px
+
+@media screen and (max-width: 1000px)
+	
+	.calendar-events
+		&__title
+			font-size: rem(18)
+			margin-bottom: 20px
+
+		&__list
+
+
+
+			&::-webkit-scrollbar 
+				width: 23px
+
+			&::-webkit-scrollbar-track
+				border-radius: 0
+				background: #D6D8E3
+				border-left: 20px solid #fff
+
+			&::-webkit-scrollbar-thumb 
+				border-radius: 0
+				background: var(--second-color)
+				border-left: 20px solid #fff
+
+		&__el
+			flex-wrap: wrap
+
+			&-info
+				width: 100%
+				margin-bottom: 15px
+				margin-right: 0
+				max-width: 100%
+
+
+			&-status
+				margin-left: 0
+
+
+
+
+	.inner
+
+		.calendar-events-cont
+			padding: 35px 0
+
+
+	.calendar-events__info-top
+		flex-direction: column
+
+	.calendar__filter
+		justify-content: flex-start
+		margin-top: 20px
+
+	.calendar__select
+		margin-left: 0
+		margin-right: 20px
+
+
+@media screen and (max-width: 667px)
+
+	.inner:not(.page-calc__body) .calendar-events-cont
+		padding: 35px 0 0
+
+
+	.calendar-events
+		flex-direction: column
+
+		&__aside
+			width: 100%
+			margin: 0 0 20px 0
+
+		&__info
+			width: 100%
+
+			&-title
+				font-size: 1.4rem
+
+		&__list
+			max-height: 265px
+
+		&__item
+			padding: 10px 0
+
+		&-cont
+			padding: 50px 0
+
+	.calendar__filter
+		flex-direction: column
+
+	.calendar__select
+		margin: 0 0 20px 0
+
+		select
+			width: 100%
+
+	.calendar-events-cont
+		padding: 35px 0
+
+	.calendar-events
+		&__item
+			flex-direction: column
+
+			&:after, &:before
+				display: none
+
+		&__date
+			width: auto
+			display: flex
+			position: relative
+			align-items: flex-end
+			margin-bottom: 15px
+
+			&-num
+				font-size: 1.4em
+				margin-bottom: 0
+				margin-right: 5px
+				line-height: 1
+
+			&-month
+				margin-bottom: 0
+				margin-right: 5px
+				line-height: 1
+
+			&-weekday
+				line-height: 1
+
+		&__elements
+			margin-left: 0
+
+		&__el
+			padding: 15px
+
+			&-status
+				margin-right: 20px
+			
+			.btn--arrow 
+				margin-left: auto
+
+

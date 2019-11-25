@@ -1,0 +1,81 @@
+.events-one
+	display: flex
+
+	&__left
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		width: 420px
+		flex: none
+		margin-right: 100px	
+
+	&__date
+		border-radius: 18px
+		background-color: var(--second-color)
+		color: #fff
+		line-height: 1
+		margin-bottom: 50px
+		padding: 10px 15px
+
+	&__title
+		font-size: rem(30)
+		font-weight: 300
+
+
+.events-form
+	margin-top: 45px
+	background-color: var(--backgroundColor)
+	padding: 70px 65px
+
+
+	.form
+		&__title
+			font-size: rem(22)
+			margin-bottom: 52px
+
+		&__submit
+			margin-top: 45px
+
+			.btn
+				padding: 21px 24px
+
+			&-text
+				max-width: 445px
+
+
+@media screen and (max-width: 1400px)
+
+	.events-one__left
+		width: 315px
+		margin-right: 55px
+
+@media screen and (max-width: 1200px)
+	
+	.events-one__date
+		margin-bottom: 25px
+
+
+	.events-form
+		margin-top: 35px
+		padding: 35px
+
+@media screen and (max-width: 1000px)
+	
+	.events-one
+		flex-direction: column
+
+		&__left
+			width: 100%
+			margin: 0 0 20px 0
+
+
+@media screen and (max-width: 667px)
+	
+	.events-form
+		margin-top: 20px
+		padding: 25px
+
+
+		.form__submit
+			margin-top: 30px
+

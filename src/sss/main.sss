@@ -32,6 +32,9 @@
 @import "404.sss"
 @import "supports-slider.sss"
 @import "supports-contacts.sss"
+@import "calendar-events.sss"
+@import "forms.sss"
+@import "events-form.sss"
 
 
 
@@ -251,8 +254,8 @@
 			left: calc(50% - 4px)
 			size: 8px
 			transform: rotate(45deg)
-			border-right: 1px solid #000
-			border-top: 1px solid #000
+			border-right: 1px solid #fff
+			border-top: 1px solid #fff
 
 	&-button
 		&-prev
@@ -284,6 +287,7 @@
 .content-aside
 	margin-left: auto
 	max-width: 440px
+	grid-area: aside
 
 	> *
 		margin-bottom: 40px
@@ -294,11 +298,20 @@
 
 .content-main
 	width: 100%
+	grid-area: content
+
+	&:first-child
+		grid-column: span 2
+
 	
 	&-cont
-		display: flex
-		flex-direction: row-reverse
+		display: grid
+		grid-template-columns: 1fr 440px
+		grid-template-areas: "tags tags" "content aside"
 
+.tags
+	grid-column: span 2
+	grid-area: tags
 
 .mobile-menu
 	position: fixed
@@ -312,10 +325,43 @@
 	z-index: 10
 	overflow-x: hidden
 	background: var(--backgroundColor)
+	display: flex
+	flex-direction: column
+
+	.soc
+		padding: 15px
+		border-top: 1px solid var(--mainColor)
+
+	.head-contacts-el
+		&:nth-child(2)
+			background-color: var(--backgroundColor)
+			order: -1
+			border-bottom: 1px solid var(--mainColor)
+
+			select
+				display: block
+				border: 0
+				height: 44px
+				padding: 0 25px 0 15px
+				background-color: var(--backgroundColor)
+				width: 100%
+				background-image: url('../img/ico-arrow-black.svg')
+				background-repeat: no-repeat
+				background-position: right 10px center
+
+		&:nth-child(3)
+			margin-top: auto
+
+			a
+				display: block
+				border-top: 1px solid var(--mainColor)
+				padding: 15px
+				text-align: left
 
 	.head-menu
 		&__list
 			flex-direction: column
+			flex: none
 
 		&__item
 			position: static
@@ -323,6 +369,12 @@
 
 			&:hover>a:after
 				display: none
+
+			&:first-child>a
+				padding-left: 15px
+
+				&:before
+					margin-right: 0
 				
 
 			&.active
@@ -480,7 +532,6 @@
 				font-size: 20px
 
 			a
-				border-bottom: 1px solid #5f86f2
 				color: #5f86f2
 
 			img[align="right"]
@@ -655,13 +706,22 @@
 		padding: 10px 20px
 
 	.content-aside
-		max-width: 300px
+		max-width: 100%
 
 	.content-main--left
 		width: calc(100% - 330px)
 
 	.content-aside+.content-main
 		width: calc(100% - 330px)
+
+	.content-main-cont
+		grid-template-columns: 1fr 400px
+		grid-template-areas: "tags tags" "aside aside" "content content"
+
+	.content-aside
+		grid-column: span 2
+		margin-left: 0
+
 
 
 @media screen and (max-width: 1000px)
@@ -693,7 +753,7 @@
 
 	.content-aside
 		max-width: 100%
-		margin-top: 30px
+		margin: 30px 0
 		margin-left: 0
 
 		> *
@@ -702,7 +762,7 @@
 
 @media screen and (max-width: 667px)
 
-	#content
+	body, html
 		overflow-x: hidden
 
 	.inner 
@@ -721,5 +781,9 @@
 
 	#form_message
 		padding: 25px !important
+
+
+	.content-main-cont
+		grid-template-columns: 1fr
 
 

@@ -1,8 +1,11 @@
 .supports-contacts
 	display: flex
 	align-items: flex-start
-	background-color: #fff
-	padding: 45px 40px
+	background-color: var(--backgroundColor)
+	padding: 40px
+	margin-top: 80px
+	border-radius: 5px
+
 
 	&-cont
 		padding: 50px 0 90px
@@ -23,7 +26,6 @@
 
 	&__bot
 		display: flex
-		// justify-content: space-between
 
 		
 		.supports-contacts__el
@@ -82,7 +84,7 @@
 
 @media screen and (max-width: 1000px)
 	
-	..sss
+	.supports-contacts
 		flex-wrap: wrap
 
 		&__el

@@ -10666,14 +10666,15 @@ document.addEventListener("DOMContentLoaded", function (e) {
 	});
 
 	var swiperStorySuccess = new _swiper2.default(".story-success .swiper-container", {
-		slidesPerView: 1,
+		slidesPerView: 3,
+		spaceBetween: 40,
 		a11y: {
 			enabled: document.body.classList.contains("special__body")
 		},
 		loop: true,
 		roundLengths: true,
 		// autoplay: true,
-		autoHeight: true,
+		// autoHeight: true,
 		navigation: {
 			nextEl: '.story-success .swiper-button-next',
 			prevEl: '.story-success .swiper-button-prev'
@@ -30347,9 +30348,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 	});
 
 	var menuClone = (0, _jquery2.default)('.head-menu__list').clone();
-	var socClone = (0, _jquery2.default)('header .soc').clone();
+	var socClone = (0, _jquery2.default)('.footer .soc').clone();
+	var contClone = (0, _jquery2.default)('header .head-contacts-el').clone();
 
 	(0, _jquery2.default)('.mobile-menu').append(menuClone);
+	(0, _jquery2.default)('.mobile-menu').append(contClone);
 	(0, _jquery2.default)('.mobile-menu').append(socClone);
 
 	// $('.head-menu__item').find('ul').closest('li').addClass('js__has-submenu');

@@ -32,6 +32,7 @@
 	.lc-links
 		display: flex
 		align-items: center
+		margin-left: auto
 
 		a
 			&:first-child
@@ -171,8 +172,6 @@
 
 	&-menu
 		display: flex 
-		flex: 1 1 auto
-		width: calc(100% - 50px)
 
 		&__list
 			position: relative
@@ -370,25 +369,28 @@
 	
 	.head-menu
 		&__link
-			padding: 20px 30px
+			padding: 20px 15px
 
 	.main 
 		.head
 			margin-bottom: 30px
+
+@media screen and (max-width: 1300px)
+
+	.head-search-cont
+		max-width: 365px
 
 @media screen and (max-width: 1200px)
 
 	.head-menu__link
 		padding: 20px
 
+
 	.head
 		&-soc
 			display: none
 
 		&-bot-cont
-			display: none
-
-		&-contacts-el
 			display: none
 
 		.btn 
@@ -411,6 +413,14 @@
 	.submenu__item
 		width: 100%
 
+	.head-top
+		flex-wrap: wrap
+
+	.head-search-cont
+		max-width: 100%
+		order: 1
+		margin-top: 25px
+
 
 
 @media screen and (max-width: 667px)
@@ -430,6 +440,10 @@
 	.logo
 		img
 			width: 100px
+
+	.head
+		.head-contacts__item.ico-special, .head-contacts-el
+			display: none
 
 
 @media screen and (max-width: 660px)
