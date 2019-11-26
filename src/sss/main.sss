@@ -174,8 +174,8 @@
 .story-success__btn
 	display: none
 	
-.no-bread__crumbs
-	margin-top: 55px
+// .no-bread__crumbs
+// 	margin-top: 55px
 
 .swiper-wrapper
 	div[id*="bx_incl_area"]
@@ -285,16 +285,12 @@
 		size: 23px 43px
 
 .content-aside
-	margin-left: auto
-	max-width: 440px
 	grid-area: aside
 
 	> *
 		margin-bottom: 40px
 
 
-.content-aside + .content-main
-	width: calc(100% - 480px)
 
 .content-main
 	width: 100%
@@ -308,6 +304,7 @@
 		display: grid
 		grid-template-columns: 1fr 440px
 		grid-template-areas: "tags tags" "content aside"
+		grid-gap: 40px
 
 .tags
 	grid-column: span 2
@@ -726,8 +723,8 @@
 
 @media screen and (max-width: 1000px)
 
-	.no-bread__crumbs
-		margin-top: 30px
+	// .no-bread__crumbs
+	// 	margin-top: 30px
 
 	.content-main-cont
 		flex-direction: column-reverse
@@ -776,8 +773,8 @@
 	.scroll-top
 		bottom: 75px
 
-	.no-bread__crumbs
-		margin-top: 0
+	// .no-bread__crumbs
+	// 	margin-top: 0
 
 	#form_message
 		padding: 25px !important

@@ -229,7 +229,10 @@
 			color: currentColor
 			display: inline-block
 			padding: 27px 25px
-
+.wrapper
+	.wrapper
+		padding: 0
+		
 .submenu
 	position: absolute
 	left: 0
@@ -250,9 +253,9 @@
 		margin: 0 0 -20px -20px
 		background: #fff
 
-		display: grid
-		grid-template-columns: repeat(2,1fr)
-		grid-gap: 10px
+		// display: grid
+		// grid-template-columns: repeat(2,1fr)
+		// grid-gap: 10px
 
 
 
@@ -261,20 +264,23 @@
 		width: calc((100% - 20px * 3) / 3)
 		margin: 0 0 20px 20px
 
-		&:not(:last-child)
-			margin-right: 80px
+		// &:not(:last-child)
+		// 	margin-right: 80px
 
 		&-link
 			color: currentColor
+			display: block
+			width: 100%
 
 		&-top
 			margin-bottom: 10px
 
 			a 
 				font-weight: 600
-				white-space: nowrap
+				// white-space: nowrap
 		&-bot
 			color: #9BAABB
+
 			.submenu__item-link
 				display: block
 
