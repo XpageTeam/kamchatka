@@ -1,0 +1,58 @@
+.docs-detail
+		
+	&__item
+		display: flex
+		align-items: center
+		transition: background .5s ease,box-shadow .5s ease
+		padding: 35px 0
+
+		&:not(:first-child)
+			border-top: 1px solid #dee0e3
+
+
+		&-cont
+			position: relative
+			background-color: #F5F6FA
+			transition: background .5s ease, box-shadow .5s ease
+			padding: 65px 0
+			border-top: 1px solid #DEE0E3
+
+			&:hover
+				box-shadow: 0 20px 30px rgba(0,0,0,.05)
+				z-index: 10
+				// + .docs-detail__item-cont
+				// background-color: #fff
+				// box-shadow: 0px 4px 30px rgba(40, 49, 95, 0.05)
+				// &:hover
+
+
+		&-info
+			display: flex
+			align-items: flex-start
+			flex-direction: column
+
+		&-date
+			line-height: 1
+			padding: 9px 15px 8px 15px
+			border-radius: 18px
+			background-color: var(--second-color)
+			color: #fff
+			margin-bottom: 30px
+			font-size: em(13)
+
+		&-title
+			font-size: em(16)
+			max-width: 880px
+			margin-right: 20px
+
+		.btn--download
+			margin-left: auto
+			flex: none
+			width: 58px
+			height: 58px
+			background-image: url("../img/ico-btn-download.svg")
+			border-radius: 5px
+			background-color: var(--secondColor)
+			background-position: 50%
+			background-repeat: no-repeat
+			font-size: 0

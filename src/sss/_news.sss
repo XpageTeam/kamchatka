@@ -6,12 +6,12 @@
 			grid-gap: 50px
 			grid-template-columns: repeat(3,1fr)
 
-		&-slider
-			width: 100% !important
-
 		&-slider-container
 			grid-column: span 2
 			margin-bottom: 0 !important
+
+			.swiper-arrow:before
+				border-color: #000
 
 .main
 	.news
@@ -37,14 +37,11 @@
 .news
 	&-slider
 		position: relative
-		width: calc(100% - 480px)
-		margin-right: 40px
-		display: flex
-
+		border-radius: 5px
+		width: 100%
 
 		.swiper-button-next
 			margin-left: 20px
-
 
 		&__label
 			padding: 15px
@@ -53,8 +50,6 @@
 			line-height: 1
 			color: #000
 			margin: 55px 0 0 70px
-
-
 
 		&__title
 			font-size: rem(20)
@@ -65,18 +60,9 @@
 			font-size: rem(14)
 			margin-top: 15px
 
-
-		&--right
-			display: flex 
-			flex-direction: column
-			margin-bottom: -40px
-
-			.news__item
-				margin-bottom: 40px
-
 		&-container
 			display: flex
-			margin-bottom: 40px
+			border-radius: 5px
 
 		&__info
 			&-cont
@@ -91,11 +77,9 @@
 				margin-right: 40px
 				flex: none
 
-		
-			
-
 		&__item
 			position: relative
+			border-radius: 5px
 
 			img 
 				display: block
@@ -103,6 +87,19 @@
 				height: 100%
 				object-fit: cover 
 				object-position: center
+				border-radius: 5px
+
+			&:before 
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				display: block
+				background: url('../img/photos/main-banner-bg.png') no-repeat center
+				background-size: cover
+				border-radius: 5px
 
 			&-cont
 				position: absolute
@@ -138,7 +135,7 @@
 
 			img
 				display: block
-				width: 100%
+				// width: 100%
 
 
 
@@ -186,19 +183,6 @@
 			margin-top: 85px
 			display: flex
 			justify-content: center
-	// 	display: flex 
-	// 	flex-wrap: wrap
-	// 	margin: 0 0 -40px -40px
-
-	// 	&-btn
-	// 		width: 100%
-	// 		text-align: center
-
-
-	// 	.news__item
-	// 		width: calc((100% - 40px * 3) / 3)
-	// 		margin: 0 0 40px 40px
-	// 		flex: none
 
 
 	
@@ -225,42 +209,27 @@
 
 @media screen and (max-width: 1200px)
 
-	@supports (display: grid)
-		.news
-			grid-template-columns: repeat(2,1fr)
-
-			&-slider-container
-				grid-column: span 2
-
-			&-slider
-				margin-bottom: 0 !important
-				height: 100%
-
-	
 	.news-slider
-		width: 100%
 		margin-bottom: 30px
 
 		&-container
-			flex-direction: column
-			margin-bottom: 30px
+			margin-left: 30px
+			width: calc(100% - 30px) !important
 
-		&--right
-			flex-direction: row
+		
+	.news
+		&__list 
+			display: flex
+			flex-wrap: wrap
 			margin: 0 0 -30px -30px
 
-			.news__item
-				width: calc((100% - 30px * 2) / 2)
-				margin: 0 0 30px 30px
-
-	.news__list 
-		margin: 0 0 -30px -30px
-
-		.news__item
+		&__item
 			width: calc((100% - 30px * 2) / 2)
 			margin: 0 0 30px 30px
 
-	.news__item
+@media screen and (max-width: 1000px)
+
+	.news__item-info
 		padding: 20px
 
 @media screen and (max-width: 667px)
@@ -268,33 +237,16 @@
 	.tags-mobile
 		display: none
 
-
 	.contests_menu1
 		flex-direction: column
 
-
-
-	.news
-		display: flex !important
-		flex-direction: column
-
-		> *
-			&:not(:first-child)
-				margin-top: 20px
-
-		&-slider
-			&-container
-				margin-top: 30px
-				height: 450px
-
-
-
+	.news-slider
+		width: 100%
 
 	.news-slider
 
 		.main-slider__nav
-			top: -40px
-			right: 0
+			right: 20px
 		
 		&__label
 			padding: 9px 15px
@@ -314,28 +266,14 @@
 			font-size: 1rem
 
 
+	.news
 
-		&--right
-			flex-wrap: wrap
-			.news__item
-				width: 100%
-				margin: 0 0 30px 30px
-				padding: 20px
-
-	.news__list
-		margin: 0
-
-		.news__item
+		&__item
 			width: 100%
-			margin: 0 0 30px 
-			padding: 20px
 
-	.news__item
-		padding: 20px
 
-		&-logo
-			right: 0
-			width: 50px
-			transform: translateY(-37%)
+
+
+
 
 

@@ -288,8 +288,10 @@
 @media screen and (max-width: 1300px)
 	
 	.calendar-events
-
 		align-items: flex-start
+
+		&__el
+			flex-wrap: wrap
 
 		&__info
 			width: calc(100% - 240px)
@@ -306,17 +308,16 @@
 			padding: 10px
 
 	
-		&__el-info
-			max-width: 600px
+		&__el
+			&-info
+				width: 100%
+				max-width: 100%
+				margin: 0 0 20px 0
+
+			&-status
+				margin-left: 0
 
 
-
-
-
-@media screen and (max-width: 1200px)
-	
-	.calendar-events__el-info
-		max-width: 363px
 
 @media screen and (max-width: 1000px)
 	

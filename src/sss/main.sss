@@ -35,14 +35,13 @@
 @import "calendar-events.sss"
 @import "forms.sss"
 @import "events-form.sss"
-
+@import "docs.sss"
 
 
 #form_message
 	padding: 45px !important
 
 	
-
 #okvad-list
 	margin-top: 30px
 
@@ -184,7 +183,7 @@
 			
 .contests_menu1 
 	display: flex
-	margin-bottom: 30px
+	// margin-bottom: 30px
 
 	li
 		margin-right: 20px
@@ -291,24 +290,42 @@
 		margin-bottom: 40px
 
 
+// .content
+// 	display: grid
+// 	grid-template-columns: 1fr 440px
+// 	grid-template-areas: "title-block title-block" "news-links news-links" "tags tags" "content aside"
+// 	grid-gap: 40px
+
+.title-block__cont
+	grid-area: title-block
+
+.news-links
+	grid-area: news-links
+	grid-column: span 2
+
+
 
 .content-main
 	width: 100%
 	grid-area: content
 
-	&:first-child
-		grid-column: span 2
+	// &:first-child
+	// 	grid-column: span 2
 
 	
 	&-cont
 		display: grid
 		grid-template-columns: 1fr 440px
-		grid-template-areas: "tags tags" "content aside"
+		grid-template-areas: "tags tags" "news-links news-links" "content aside"
 		grid-gap: 40px
 
 .tags
-	grid-column: span 2
 	grid-area: tags
+	// grid-column: span 2
+
+.news-links
+	+ .content-main
+		grid-column: span 2
 
 .mobile-menu
 	position: fixed
@@ -708,16 +725,17 @@
 	.content-main--left
 		width: calc(100% - 330px)
 
-	.content-aside+.content-main
-		width: calc(100% - 330px)
-
-	.content-main-cont
-		grid-template-columns: 1fr 400px
-		grid-template-areas: "tags tags" "aside aside" "content content"
+	
 
 	.content-aside
-		grid-column: span 2
+		grid-column: 1
 		margin-left: 0
+
+	.content-main-cont
+		grid-template-columns: 100%
+		grid-template-areas: "tags" "news-links" "aside" "content"
+		grid-gap: 20px
+
 
 
 
@@ -750,7 +768,7 @@
 
 	.content-aside
 		max-width: 100%
-		margin: 30px 0
+		margin: 0
 		margin-left: 0
 
 		> *
@@ -761,6 +779,9 @@
 
 	body, html
 		overflow-x: hidden
+
+	.news-links+.content-main
+		grid-column: auto
 
 	.inner 
 		.footer
@@ -781,6 +802,9 @@
 
 
 	.content-main-cont
-		grid-template-columns: 1fr
+		grid-template-columns: 100%
+		display: grid
+		grid-template-areas: "tags" "news-links" "aside" "content"
+		grid-gap: 20px
 
 
