@@ -1,47 +1,5 @@
-// @font-face 
-
-// 	font-family: Montserrat
-// 	font-style: normal
-// 	font-weight: 300
-// 	src: url('../fonts/Montserrat/montserrat-light.woff2') format("woff")
-// 	font-display: swap
-
-// @font-face 
-
-// 	font-family: Montserrat
-// 	font-style: normal
-// 	font-weight: 400
-// 	src: url('../fonts/Montserrat/montserrat-regular.woff2') format("woff")
-// 	font-display: swap
-
-// @font-face 
-
-// 	font-family: Montserrat
-// 	font-style: normal
-// 	font-weight: 500
-// 	src: url('../fonts/Montserrat/montserrat-medium.woff2') format("woff")
-// 	font-display: swap
-
-// @font-face 
-
-// 	font-family: Montserrat
-// 	font-style: normal
-// 	font-weight: 600
-// 	src: url('../fonts/Montserrat/montserrat-semibold.woff2') format("woff")
-// 	font-display: swap
-
-// @font-face 
-
-// 	font-family: Montserrat
-// 	font-style: normal
-// 	font-weight: 700
-// 	src: url('../fonts/Montserrat/montserrat-bold.woff2') format("woff")
-// 	font-display: swap
-
 body
 	position: relative
-// 	display: flex
-// 	flex-direction: column
 
 img
 	max-width: 100%
@@ -76,6 +34,29 @@ input
 		border: 1px solid #000
 		padding: 0 20px
 
+.head-search
+	display: flex
+
+	input[type="submit"]
+		width: 100px
+		height: 55px
+		border: 1px solid #000
+		border-left: 0
+		border-radius: 0!important
+		background-color: transparent
+		cursor: pointer
+		display: block
+
+.head-contacts__item.ico-location
+	select
+		height: 55px
+		border: 1px solid #000
+		padding: 0 20px
+
+.head-contacts-el
+	display: flex
+	flex-direction: column
+
 .lk-aside__links
 	margin-bottom: 20px
 	padding-bottom: 20px
@@ -104,7 +85,7 @@ input
 	margin-right: 20px
 
 .head-special
-	margin-bottom: 100px
+	margin-bottom: 30px
 
 .head-menu__item 
 	&:nth-child(2)
@@ -373,9 +354,9 @@ body
 	display: inline-block
 	padding: 15px 25px
 	line-height: 1!important
-	border-radius: 25px!important
 	border: 1px solid #000 
 	color: #000
+	background-color: #fff
 
 .head-menu
 	li 
@@ -439,14 +420,14 @@ body
 		position: relative
 		display: flex 
 		flex-wrap: wrap
-		border-left: 1px solid #000
-		border-top: 1px solid #000
 
 	&__item
 		width: calc(100% / 3)
 		padding: 20px
 		border-bottom: 1px solid #000
 		border-right: 1px solid #000
+		border-left: 1px solid #000
+		border-top: 1px solid #000
 
 	&__label
 		font-size: rem(18)
@@ -545,6 +526,10 @@ table
 			margin-bottom: 30px
 
 		&__input
+
+			form
+				display: flex
+
 			.input
 				width: calc(100% - 100px)
 				height: 50px
@@ -567,6 +552,7 @@ table
 				.label
 					margin-bottom: 20px
 					display: block
+					font-size: rem(22)
 
 
 	&-title
@@ -586,15 +572,12 @@ table
 
 	&-stat
 		display: flex
-		flex-direction: column
-		justify-content: space-between
-		flex: 1 1 auto
-		width: 360px
-		margin-left: 40px
+		margin: 30px 0 -30px -30px
 
 		&__item
-			display: flex 
-			align-items: center
+			display: flex
+			width: calc((100% - 30px * 4) / 4)
+			margin: 0 0 30px 30px
 
 			&-num
 				font-size: 0
@@ -608,7 +591,70 @@ table
 					line-height: 1
 
 
-		
+.calendar-top__link
+	display: flex
+	justify-content: center
+	margin-top: 20px
+
+.head-bot
+	display: flex
+	flex-direction: column-reverse
+
+.lc-links
+	display: flex
+	justify-content: flex-end
+	margin-bottom: 20px
+	a
+		border: 0
+
+		&:last-child
+			padding-right: 0
+
+.partners
+	&-cont
+		background-color: #fff
+		padding: 70px 0 80px 
+
+	&-title
+		font-size: rem(26)
+		font-weight: 500
+
+	&-top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 40px
+
+		.swiper-button-next
+			margin-left: 20px
+
+	&-arrow
+		display: flex
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -20px -20px
+
+
+	&__item
+		display: flex
+		align-items: center
+		background: #fff
+		border: 1px solid #000
+		border-radius: 5px
+		padding: 20px
+		width: calc((100% - 20px * 3) / 3)
+		margin: 0 0 20px 20px
+
+
+		&-img
+			flex: none
+			margin-right: 20px
+
+			display: none
+
+
 .task
 	&-cont
 		margin-top: 60px
@@ -616,6 +662,7 @@ table
 	&-title
 		font-size: rem(22)
 		font-weight: bold
+		margin-bottom: 20px
 
 	&__list
 		display: flex
@@ -724,31 +771,6 @@ table
 			border: 1px solid #000
 
 
-.partners
-
-	&-cont
-		margin-top: 60px
-
-	&-title
-		font-size: rem(22)
-		font-weight: bold
-		margin-bottom: 20px
-
-	.swiper
-		&-wrapper
-			display: flex
-			flex-wrap: wrap
-			margin: 0 0 -20px -20px
-
-	.swiper-slide
-		display: flex
-		flex-direction: column
-		align-items: center
-		justify-content: center
-		width: calc((100% - 20px * 3) / 3)
-		margin: 0 0 20px 20px
-		border: 1px solid #000
-		padding: 20px
 .logo
 	img
 		filter: grayscale(100%)
@@ -764,23 +786,19 @@ table
 	&__middle, &__bot
 		margin-top: 30px
 
-
-
-	&__link
-		&:not(:first-child)
-			margin-left: 20px
-
 	&-logo
 		display: none
 
 	&-menu
-		display: flex
-		justify-content: space-around
+		display: block
+		column-count: 2
+		column-gap: 30px
 
-		a 
-			font-weight: bold
+		a
 			text-decoration: underline
 			font-size: rem(20)
+			display: block
+
 
 
 		br 
@@ -865,7 +883,11 @@ table
 
 		&__info
 			display: flex
-			align-items: center
+			align-items: flex-start
+			flex-direction: column
+
+			br
+				display: none
 
 
 		&-title
@@ -891,6 +913,9 @@ table
 		display: block
 		color: #000
 
+.wrapper
+	.wrapper
+		padding: 0
 .news
 	margin-top: 30px
 
@@ -914,8 +939,8 @@ table
 	&__list
 		display: flex
 		flex-wrap: wrap
-		border-top: 1px solid #000
-		border-left: 1px solid #000
+		// border-top: 1px solid #000
+		// border-left: 1px solid #000
 		margin-top: 20px
 
 	&__item
@@ -926,6 +951,9 @@ table
 		border: 1px solid #000
 		display: block
 		margin-top: 20px
+
+		img
+			display: none
 
 
 		&-label
@@ -1012,3 +1040,22 @@ table
 
 		figure
 			display: none
+
+.docs
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -20px -20px
+
+	&__item
+		width: calc((100% - 20px * 3) / 3)
+		margin: 0 0 20px 20px
+		border: 1px solid #000
+		border-radius: 5px
+		padding: 20px
+
+
+		&-title
+			font-size: rem(20)
+
+
