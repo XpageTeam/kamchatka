@@ -183,7 +183,7 @@
 			
 .contests_menu1 
 	display: flex
-	// margin-bottom: 30px
+	margin-bottom: 30px
 
 	li
 		margin-right: 20px
@@ -314,10 +314,12 @@
 
 	
 	&-cont
-		display: grid
-		grid-template-columns: 1fr 440px
-		grid-template-areas: "tags tags" "news-links news-links" "content aside"
-		grid-gap: 40px
+		display: flex
+		flex-direction: row-reverse
+		// display: grid
+		// grid-template-columns: 1fr 440px
+		// grid-template-areas: "tags tags" "news-links news-links" "content aside"
+		// grid-gap: 40px
 
 .tags
 	grid-area: tags
@@ -345,6 +347,10 @@
 	.soc
 		padding: 15px
 		border-top: 1px solid var(--mainColor)
+
+		&__link
+			background-color: transparent
+			border: 1px solid var(--main-color)
 
 	.head-contacts-el
 		&:nth-child(2)
@@ -734,7 +740,10 @@
 	.content-main-cont
 		grid-template-columns: 100%
 		grid-template-areas: "tags" "news-links" "aside" "content"
-		grid-gap: 20px
+		// grid-gap: 20px
+
+	.tags
+		margin-bottom: 20px
 
 
 
@@ -805,6 +814,6 @@
 		grid-template-columns: 100%
 		display: grid
 		grid-template-areas: "tags" "news-links" "aside" "content"
-		grid-gap: 20px
+		// grid-gap: 20px
 
 
