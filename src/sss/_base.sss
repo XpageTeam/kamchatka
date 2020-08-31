@@ -190,8 +190,12 @@ li
 .text-page, .support-for-whom__text
 	// max-width: 920px
 
-	> *:not(:first-child)
-		margin-top: rem(24)
+	*
+		&:empty
+			display: none
+
+	> *:not(:last-child)
+		margin-bottom: rem(24)
 		max-width: 1050px
 
 	strong

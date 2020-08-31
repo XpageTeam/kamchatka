@@ -4,6 +4,37 @@
 	&__cont
 		color: #fff
 
+	&-form-cont
+
+		.head-search-cont
+			max-width: 50%
+
+			input
+				&[type=submit]
+					width: auto
+
+				&[type=text]
+					padding: 0 125px 0 50px
+
+
+		.search
+			padding: 0 !important
+			background: none !important
+
+			&-item
+				display: flex
+				justify-content: space-between
+				margin: 25px 0
+
+				.docs-detail__item
+					&-title
+						display: none
+
+					&-text
+						margin-right: 20px
+				
+
+
 .main
 	.search
 		&__cont
@@ -18,3 +49,12 @@
 
 	.support-variant__input-cont
 		padding: 0
+
+@media (width <= 1000px)
+
+	.search
+
+		&-form-cont
+
+			.head-search-cont
+				max-width: 100%

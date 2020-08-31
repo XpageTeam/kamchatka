@@ -127,6 +127,8 @@ document.addEventListener("DOMContentLoaded", e => {
 		}
 	});
 
+	console.log(1);
+
 	let swiperStorySuccess = new Swiper(".story-success .swiper-container", {
 		slidesPerView: 3,
 		spaceBetween: 40,
@@ -138,9 +140,21 @@ document.addEventListener("DOMContentLoaded", e => {
 		// autoplay: true,
 		// autoHeight: true,
 		navigation: {
-	        nextEl: '.story-success .swiper-button-next',
+			nextEl: '.story-success .swiper-button-next',
 	        prevEl: '.story-success .swiper-button-prev',
-	      },
+		},
+		breakpoints: {
+			1100: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+				
+			},
+			667: {
+				slidesPerView: 1,
+				
+			},
+
+		}
 	});
 
 	let swiperNewsBanner = new Swiper(".news-slider .swiper-container", {

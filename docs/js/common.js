@@ -10665,6 +10665,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
 		}
 	});
 
+	console.log(1);
+
 	var swiperStorySuccess = new _swiper2.default(".story-success .swiper-container", {
 		slidesPerView: 3,
 		spaceBetween: 40,
@@ -10678,6 +10680,18 @@ document.addEventListener("DOMContentLoaded", function (e) {
 		navigation: {
 			nextEl: '.story-success .swiper-button-next',
 			prevEl: '.story-success .swiper-button-prev'
+		},
+		breakpoints: {
+			1100: {
+				slidesPerView: 2,
+				spaceBetween: 20
+
+			},
+			667: {
+				slidesPerView: 1
+
+			}
+
 		}
 	});
 

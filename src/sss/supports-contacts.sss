@@ -21,11 +21,11 @@
 		img
 			display: block
 
-	&__info
-		flex: 1 1 auto
+
 
 	&__bot
 		display: flex
+		flex: 1 1 auto
 
 		
 		.supports-contacts__el
@@ -50,8 +50,7 @@
 
 	&__info
 		display: flex
-		flex-direction: column
-		font-size: em(14)
+		flex: 1 1 auto
 
 		a
 			color: #000
@@ -70,17 +69,40 @@
 
 
 		
+@media screen and (max-width: 1600px)
 
+	.supports-contacts__info
+		flex-direction: column
+
+
+	.supports-contacts__bot
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		gap: 20px
+
+		.supports-contacts__el
+			margin: 0 !important
 
 @media screen and (max-width: 1500px)
 	
 	.supports-contacts-cont
 		padding: 45px 0
 
+
+
+
 @media screen and (max-width: 1200px)
 	
 	.supports-contacts__el:first-child
 		margin-right: 50px
+
+	.supports-contacts__el:last-child
+		grid-column: span 4
+
+@media screen and (max-width: 1100px)
+
+	.supports-contacts
+		margin-top: 40px
 
 @media screen and (max-width: 1000px)
 	
@@ -99,9 +121,19 @@
 	.supports-contacts__el
 		margin: 0 0 20px
 
+	.supports-contacts__el:not(:first-child)
+		margin-left: 0
+
+	.supports-contacts__bot
+		grid-template-columns: 100%
+
+	.supports-contacts__el:last-child
+		grid-column: span 1
+
 @media screen and (max-width: 667px)
 
 	.supports-contacts
+		margin-top: 40px
 		padding: 20px
 
 		&__el
@@ -113,8 +145,3 @@
 
 		&__img
 			margin-bottom: 20px
-
-
-
-	
-
