@@ -491,17 +491,30 @@
 		margin-top: 65px
 
 .registration
+
 	.forms
-		&-wrap 
+
+		&-wrap
+			margin: 0
+
+			&:nth-child(1)
+				a
+					&:not(:last-child)
+						margin-right: 30px
+
+			&:nth-child(2)
+				display: grid
+				grid-template-columns: repeat(4, 1fr)
+				gap: 25px 40px
+				margin: 0
+				
+
 			&:not(:first-child)
 				margin-top: 40px
 				
 		&-radio
 			margin: 0 0 25px 40px
 
-		&__input-cont
-			margin: 0 0 25px 40px
-			width: calc((100% - 40px * 4) / 4)
 
 		&__info
 			max-width: 450px
@@ -573,6 +586,9 @@
 
 		&__title
 			font-size: 1.3rem
+
+	.registration .forms-wrap:nth-child(2)
+		gap: 25px
 
 @media screen and (max-width: 1000px)
 
@@ -650,31 +666,38 @@
 		.forms__submit-cont
 			margin-top: 35px
 
-	.registration
-		.forms
-			&-wrap 
-				&:not(:first-child)
-					margin-top: 20px
+	// .registration
+	// 	.forms
+	// 		&-wrap 
+	// 			&:not(:first-child)
+	// 				margin-top: 20px
 					
-			&-radio
-				margin: 0 0 25px 40px
+	// 		&-radio
+	// 			margin: 0 0 25px 40px
 
-			&__input-cont
-				margin: 0 0 25px 40px
-				width: calc((100% - 40px * 2) / 2)
+	// 		&__input-cont
+	// 			margin: 0 0 25px 40px
+	// 			width: calc((100% - 40px * 2) / 2)
 
-			&__info
-				max-width: 450px
-				margin-left: 30px
+	// 		&__info
+	// 			max-width: 450px
+	// 			margin-left: 30px
 
-				a 
-					color: #C39367
+	// 			a 
+	// 				color: #C39367
+
+
+	.registration .forms-wrap:nth-child(2)
+		grid-template-columns: repeat(3,1fr)
 
 	.lk-cont:not(.inn_support_b24)
 		width: calc(100% - 290px)
 
 
-@media screen and (max-width: 660px)
+@media screen and (max-width: 667px)
+
+	.registration .forms-wrap:nth-child(2)
+		grid-template-columns: 100%
 
 	.acved
 		.inn-form
@@ -808,9 +831,9 @@
 			&-radio
 				margin: 0 0 25px 40px
 
-			&__input-cont
-				margin: 0 0 25px 40px
-				width: 100%
+			// &__input-cont
+			// 	margin: 0 0 25px 40px
+			// 	width: 100%
 
 			&__info
 				margin: 20px 0 0 0

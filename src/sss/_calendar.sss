@@ -56,6 +56,19 @@
 			.selectize-dropdown-content
 				max-height: 200px
 				overflow-y: auto
+				overflow-x: hidden
+
+				&::-webkit-scrollbar
+					width: 4px
+					border-left: 9px solid #fff
+				
+				&::-webkit-scrollbar-track
+					background: var(--borderColor)
+					// border-left: 9px solid #fff
+				
+				&::-webkit-scrollbar-thumb
+					background: var(--secondColor)
+					// border-left: 9px solid #fff
 
 			&:not(:first-child)
 				margin-left: 20px
@@ -198,8 +211,10 @@
 			
 
 			&__item
-				width: 100%
-				margin: 0 0 15px 0 !important
+				width: calc((100% - 40px)/2)
+				margin: 0 0 0 20px
+				flex: 1 1 auto
+
 
 				.calendar-filter__select
 					margin: 0 !important

@@ -2,6 +2,42 @@
 	display: flex
 	margin-bottom: 50px
 
+.inner
+	.stock-slider
+		position: relative
+
+	.main-sliders__title-wrapper
+		&:empty
+			display: none
+
+	.main-sliders__title-cont
+		margin-bottom: 0
+
+		
+
+	.main-sliders-arrow
+		position: relative
+		margin-bottom: 25px
+
+	.main-sliders
+		position: relative
+		overflow: visible
+		padding: 50px 0
+		margin-top: 50px
+
+		.swiper-list
+			overflow: hidden
+
+		&::before
+			content: ''
+			display: block
+			width: 100vw
+			position: absolute 0 50% 0 *
+			transform: translate3d(50%,0,0)
+			background: var(--backgroundColor)
+			z-index: 0
+			pointer-events: none
+
 .main-slider
 	width: calc(100% - 480px)
 	position: relative
@@ -194,3 +230,13 @@
 			img
 				object-fit: cover
 				object-position: center
+
+
+
+
+	.inner
+		.main-sliders-arrow
+			display: flex
+
+			.btn
+				margin-right: auto

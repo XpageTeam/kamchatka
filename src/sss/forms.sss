@@ -393,8 +393,6 @@ textarea.default-input__input
 	.fancybox-bg
 		opacity: 1 !important
 
-.fancybox-bg
-	background-color: var(--main-color) !important
 
 @media (max-width: 660px)
 	.form__submit
@@ -443,12 +441,13 @@ textarea.default-input__input
 
 		&:before
 			flex: none
-			background: #fff
+			background: var(--backgroundColor)
 			margin: 0 30px 0 0
 			size: 25px
+			border-radius: 5px
 
 		&:after
-			border: 1px solid var(--second-color)
+			border: 1px solid var(--secondColor)
 			border-top: none
 			border-left: none
 			size: 5px 10px
