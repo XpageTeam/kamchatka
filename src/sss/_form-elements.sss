@@ -192,7 +192,7 @@
 
 
 	&__input
-		padding: 0 30px
+		padding: var(--input-padding)
 		min-height: 55px
 		border: 1px solid transparent
 		transition: border-color .3s ease
@@ -214,6 +214,7 @@
 
 			&-support 
 				pointer-events: none
+				padding-right: 60px
 
 
 
@@ -247,20 +248,32 @@
 		pointer-events: none
 
 		&--file
-			&:before
-				content: attr(data-btn-text)
-				position: absolute
-				pointer-events: all
-				background: url('../img/ico-clip.png') center no-repeat, #f4f4f4
-				right: 0
-				bottom: 0
-				cursor: pointer
-				height: 62px
-				width: 60px
-				text-align: right
-				line-height: 49px
-				box-sizing: border-box
-				padding-right: 0.83333vw
+			display: inline-block
+			// margin-bottom: 15px
+
+			// &:empty
+			// 	display: none !important
+
+		&-file
+			size: 100% 55px
+			position: absolute 0 0 0 *
+			border-radius: 0 5px 5px 0
+			cursor: pointer
+			transition: background-color .3s ease
+
+			&:after
+				content: ''
+				display: block
+				size: 55px
+				position: absolute 0 0 * *
+				background: url("../img/ico-file.svg") center no-repeat, #fff
+				border-radius: 0 5px 5px 0
+				transition: background .3s ease
+				background-color: #d1dbe5
+
+			&:hover
+				&:after
+					background-color: var(--main-color)
 
 	&__error-message
 		position: absolute
@@ -269,6 +282,29 @@
 		background-color: #fff
 		padding: 5px
 		opacity: 0
+
+.forms__label--file:before
+	content: ""
+	position: absolute
+	pointer-events: all
+	background: url(../img/ico-clip.svg) 50% no-repeat,#d1dbe5
+	right: 0
+	bottom: 0
+	cursor: pointer
+	width: 55px
+	height: 55px
+	box-sizing: border-box
+	border-radius: 0 5px 5px 0!important
+
+
+.forms__label.forms__label--file
+	font-size: rem(14)
+	line-height: 1
+	margin-bottom: 0 !important
+	pointer-events: none
+	display: block
+	transition: opacity .3s ease, font-size .3s ease
+	color: #000
 
 .error
 	~ .forms__error-message
@@ -328,6 +364,9 @@
 	.forms__input-cont
 		margin: 0 0 25px 40px
 		width: 100%
+
+.form__title
+	font-size: 21px
 
 
 @media screen and (max-width: 660px)

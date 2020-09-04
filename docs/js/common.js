@@ -10886,6 +10886,18 @@ document.addEventListener("DOMContentLoaded", function (e) {
 		}, 300);
 	});
 
+	(0, _jquery2.default)("body").on("change", ".forms__input--file", function (e) {
+
+		var value = (0, _jquery2.default)(this)[0].files[0].name;
+		// console.log(value);
+		var inputHasFile = (0, _jquery2.default)(this).nextAll('input[type="text"]').val(value);
+
+		// if(inputHasFile.length){
+		// 	$(this).nextAll('label').remove();
+		// 	$(this).nextAll(".js__input-del").addClass('close-input');
+		// }
+	});
+
 	if ((0, _jquery2.default)('body').hasClass('page-personal')) {
 
 		var list = document.querySelector('#filial__list');
@@ -10908,17 +10920,19 @@ document.addEventListener("DOMContentLoaded", function (e) {
 			});
 		}
 
-		(0, _jquery2.default)("body").on("change", ".forms__input--file", function (e) {
+		// $("body").on("change", ".forms__input--file", function(e){
 
-			var value = (0, _jquery2.default)(this)[0].files[0].name;
-			// console.log(value);
-			var inputHasFile = (0, _jquery2.default)(this).next('input[type="text"]').val(value);
+		// 	var value = $(this)[0].files[0].name;
+		// 	// console.log(value);
+		// 	var inputHasFile = $(this).nextAll('input[type="text"]').val(value);
 
-			if (inputHasFile.length) {
-				(0, _jquery2.default)(this).nextAll('label').remove();
-				// $(this).nextAll(".js__input-del").addClass('close-input');
-			}
-		});
+		// 	if(inputHasFile.length){
+		// 		$(this).nextAll('label').remove();
+		// 		$(this).nextAll(".js__input-del").addClass('close-input');
+		// 	}
+
+		// });
+
 
 		(0, _jquery2.default)("body").on("click", ".filial__item-el .add-input", function () {
 

@@ -364,6 +364,21 @@ document.addEventListener("DOMContentLoaded", e => {
 
 	})
 
+
+	$("body").on("change", ".forms__input--file", function(e){
+
+		var value = $(this)[0].files[0].name;
+		// console.log(value);
+		var inputHasFile = $(this).nextAll('input[type="text"]').val(value);
+
+		// if(inputHasFile.length){
+		// 	$(this).nextAll('label').remove();
+		// 	$(this).nextAll(".js__input-del").addClass('close-input');
+		// }
+
+	});
+
+
 	
 	
 
@@ -397,18 +412,18 @@ document.addEventListener("DOMContentLoaded", e => {
 		  	
 		}
 
-		$("body").on("change", ".forms__input--file", function(e){
+		// $("body").on("change", ".forms__input--file", function(e){
 
-			var value = $(this)[0].files[0].name;
-			// console.log(value);
-			var inputHasFile = $(this).next('input[type="text"]').val(value);
+		// 	var value = $(this)[0].files[0].name;
+		// 	// console.log(value);
+		// 	var inputHasFile = $(this).nextAll('input[type="text"]').val(value);
 
-			if(inputHasFile.length){
-				$(this).nextAll('label').remove();
-				// $(this).nextAll(".js__input-del").addClass('close-input');
-			}
+		// 	if(inputHasFile.length){
+		// 		$(this).nextAll('label').remove();
+		// 		$(this).nextAll(".js__input-del").addClass('close-input');
+		// 	}
 
-		});
+		// });
 
 
 		$("body").on("click", ".filial__item-el .add-input", function(){
