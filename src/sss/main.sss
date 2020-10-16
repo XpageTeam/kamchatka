@@ -819,3 +819,40 @@
 		// grid-gap: 20px
 
 
+.main-buttons
+	padding-bottom: 40px
+	@media (max-width: 660px)
+		padding-top: 40px
+	&__content
+		display: flex
+		align-items: center
+		width: 100%
+		@media (max-width: 860px)
+			flex-wrap: wrap
+		& a
+			height: 123px
+			text-decoration: none
+			font-size: 20px
+			color: #623B2A
+			background: #F3F6F9
+			border-radius: 5px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			width: 100%
+			padding: 0px 10px 0 20px
+			transition: background-color .3s
+			@media (max-width: 860px)
+				font-size: 14px
+				height: 70px
+			&:hover
+				background-color: #f1f6f9
+			& img
+				margin-left: 10px
+				align-self: flex-end
+				height: calc(100% - 16px)
+			&:not(:last-of-type)
+				margin-right: 20px
+				@media (max-width: 860px)
+					margin-right: 0
+					margin-bottom: 25px
