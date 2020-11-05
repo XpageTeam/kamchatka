@@ -5,6 +5,7 @@ import "./stock-sliders.js";
 import "selectize/dist/js/selectize.min.js";
 
 import "./tabs.js";
+import initTabs from './tabs'
 import "./accordion.js";
 import "./mobile-menu.js";
 import "./standart-page.js"
@@ -54,7 +55,8 @@ require("../css/jquery.fancybox.css");
 })();
 
 document.addEventListener("DOMContentLoaded", e => {
-
+	initTabs()
+	
 	$('.search-btn, .search-btn--close').click(function(){
 		var $this = $(this);
 		$('body').toggleClass('js__search-open');
@@ -127,7 +129,7 @@ document.addEventListener("DOMContentLoaded", e => {
 		}
 	});
 
-	console.log(1);
+	// console.log(1);
 
 	let swiperStorySuccess = new Swiper(".story-success .swiper-container", {
 		slidesPerView: 3,

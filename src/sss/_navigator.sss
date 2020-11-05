@@ -1,0 +1,308 @@
+.navigator
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 120px
+    @media ( max-width: 767px )
+        margin-bottom: 70px
+    &__tabs
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr))
+        grid-gap: 40px
+        @media ( max-width: 767px )
+            grid-gap: 25px
+            grid-template-columns: 1fr
+        &-button
+            cursor: pointer
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 30px 60px
+            background: #F3F6F9
+            border: 1px solid #ECF1F6
+            box-sizing: border-box
+            border-radius: 5px
+            transition: background-color .3s, border-color .3s
+            @media ( max-width: 767px )
+                padding: 15px 20px
+
+            &.active
+                background-color: #623B2A
+                border-color: #ECF1F6
+                & .navigator__tabs-button-title
+                    color: white
+            &-title
+                font-weight: 500
+                font-size: 20px
+                line-height: 134.09%
+                @media ( max-width: 767px )
+                    font-size: 18px
+                @media ( max-width: 374px )
+                    font-size: 16px
+            &-img
+                margin-left: 20px
+                flex-shrink: 0
+                width: 100%
+                max-width: 40px
+                @media ( max-width: 767px )
+                    max-width: 30px
+                & img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+    &__content
+        width: 100%
+        margin-top: 70px
+        @media ( max-width: 767px )
+            margin-top: 35px
+        &-page
+            animation: fadeInUp .6s
+            width: 100%
+            display: none
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr))
+            grid-gap: 40px
+            @media ( max-width: 767px )
+                grid-gap: 25px
+                grid-template-columns: 1fr
+            &.active
+                display: grid
+
+    &__request
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background: #F3F6F9
+        border: 1px solid #ECF1F6
+        padding: 30px 35px
+        box-sizing: border-box
+        border-radius: 5px
+        transition: background-color .3s, border-color .3s
+        @media ( max-width: 500px )
+            padding: 15px 20px
+            flex-direction: column
+        &-title
+            font-weight: 500
+            font-size: 16px
+            line-height: 150%
+            @media ( max-width: 500px )
+                text-align: center
+        &-link
+            flex-shrink: 0
+            margin-left: 30px
+            border: 1px solid #E05D39
+            border-radius: 5px
+            display: flex
+            font-size: 14px
+            align-items: center
+            height: 45px
+            color: #E05D39
+            padding: 0 20px
+            transition: background-color .3s, color .3s
+            @media ( max-width: 500px )
+                margin-left: 0
+                margin-top: 20px
+
+            &:hover
+                color: white
+                background-color: #E05D39
+                &::after
+                    flex-shrink: 0
+                    color: white
+            &::after
+                flex-shrink: 0
+                transition: color .3s
+                content: ''
+                color: #E05D39
+                border-bottom: 1px solid
+                border-left: 1px solid
+                width: 5px
+                height: 5px
+                margin-left: 15px
+                transform: rotate(-135deg)
+    &__list
+        display: flex
+        flex-direction: column
+        width: 100%
+        grid-column: span 2
+        &.active
+            & .navigator__list-title
+                background-color: #623B2A
+                color: white
+            & .navigator__list-content
+                max-height: 2000px
+                opacity: 1
+                margin-top: 40px
+        &-title
+            cursor: pointer
+            background: #B6916A
+            border-radius: 5px
+            padding: 18px 40px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            color: white
+            font-weight: 600
+            font-size: 16px
+            line-height: 134.09%
+            @media ( max-width: 767px )
+                padding: 15px 20px
+                font-size: 14px
+            &::after
+                flex-shrink: 0
+                content: ''
+                color: white
+                border-bottom: 1px solid
+                border-left: 1px solid
+                width: 5px
+                height: 5px
+                margin-left: 15px
+                transform: rotate(-45deg)
+        &-content
+            opacity: 0
+            max-height: 0
+            transition: opacity .4s, max-height .5s, margin .4s
+            height: auto
+            overflow: hidden
+            margin-top: 0
+            width: 100%
+            display: grid
+            grid-template-columns: repeat(auto-fill, minmax(470px, 1fr))
+            grid-gap: 25px 40px
+            @media ( max-width: 767px )
+                grid-gap: 25px
+                grid-template-columns: 1fr
+    &__link
+        background: #F3F6F9 no-repeat
+        background-image: url(../img/ico-logo-min.svg)
+        background-position: left 30px center
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border: 1px solid #ECF1F6
+        padding: 20px
+        padding-left: 70px
+        font-weight: 500
+        font-size: 16px
+        box-sizing: border-box
+        border-radius: 5px
+        transition: background-color .3s, border-color .3s
+        @media ( max-width: 767px )
+            padding-left: 50px
+            background-position: left 20px center
+        &-button
+            size: 41px
+            flex-shrink: 0
+            background: linear-gradient(0deg, #E04E39, #E04E39)
+            border-radius: 5px
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-left: 15px
+            &::after
+                flex-shrink: 0
+                content: ''
+                color: white
+                border-bottom: 1px solid
+                border-left: 1px solid
+                width: 5px
+                height: 5px
+                transform: rotate(-135deg)
+    &__sublist
+        &-first
+            grid-column: span 2
+            background: #FFFFFF
+            border: 1px solid #E4EAF0
+            box-sizing: border-box
+            border-radius: 5px
+            &-title
+                background: #F3F6F9 no-repeat
+                background-image: url(../img/ico-logo-min.svg)
+                background-position: left 30px center
+                display: flex
+                align-items: center
+                padding: 20px
+                padding-left: 70px
+                font-weight: 500
+                font-size: 16px
+                box-sizing: border-box
+                border-radius: 5px
+                @media ( max-width: 767px )
+                    padding-left: 50px
+                    background-position: left 20px center
+        &-second
+            border-top: 1px solid #E4EAF0
+            &.active
+                .navigator__sublist-second-content
+                    opacity: 1
+                    max-height: 1000px
+                    padding: 15px 20px 15px 35px
+            &-title
+                cursor: pointer
+                padding: 25px 35px
+                font-weight: 500
+                font-size: 16px
+                line-height: 20px
+                display: flex
+                align-items: center
+                width: 100%
+                &::before
+                    content: ''
+                    size: 5px
+                    border-radius: 50%
+                    background-color: #E04E39
+                    margin-right: 20px
+                &::after
+                    flex-shrink: 0
+                    content: ''
+                    color: black
+                    border-bottom: 1px solid
+                    border-left: 1px solid
+                    width: 5px
+                    height: 5px
+                    margin-left: auto
+                    transform: rotate(-45deg)
+            &-content
+                height: auto
+                opacity: 0
+                transition: opacity .4s, max-height .4s, padding .4s
+                max-height: 0
+                padding: 0px 20px 0px 35px
+                background: #F3F6F9
+
+            &-link
+                display: flex
+                align-items: center
+                justify-content: space-between
+                padding: 15px 0
+                & span
+                    font-size: 16px
+                    line-height: 20px
+                &-button
+                    size: 41px
+                    flex-shrink: 0
+                    background: linear-gradient(0deg, #E04E39, #E04E39)
+                    border-radius: 5px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    margin-left: 15px
+                    &::after
+                        flex-shrink: 0
+                        content: ''
+                        color: white
+                        border-bottom: 1px solid
+                        border-left: 1px solid
+                        width: 5px
+                        height: 5px
+                        transform: rotate(-135deg)
+
+@keyframes fadeInUp
+    0%
+        opacity: 0
+        transform: translateY(30px)
+    100%
+        opacity: 1
+        transform: translateY(0)

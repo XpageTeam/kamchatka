@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        title Личны кабинет - Авторизация
+        include inc/head.pug
+        include inc/css.pug
+    body.inner.loading
+        include inc/header.pug
+        main#content
+            .wrapper
+                .content
+                    .title-block__cont
+                        .title-block
+                            .title-block__crumbs
+                                .bread-crumbs
+                                    a.bread-crumbs__link(href="#") Главная
+                                    span.bread-crumbs__this Навигатор по мерам поддержки
+                            .title-block__title
+                                h1 Навигатор по мерам поддержки
+                    .content-main-cont
+                        .content-main
+                            //- NAVIGATOR
+                            .navigator
+                                .navigator__tabs(data-tabs="navigator__content")
+                                    .navigator__tabs-button.active(data-tab-page="0")
+                                        .navigator__tabs-button-title Финансовые меры поддержки
+                                        .navigator__tabs-button-img
+                                            img(src="./img/rocket.svg" alt="")
+                                    .navigator__tabs-button(data-tab-page="1")
+                                        .navigator__tabs-button-title Нефинансовые меры поддержки
+                                        .navigator__tabs-button-img
+                                            img(src="./img/rocket.svg" alt="")
+                                .navigator__content
+                                    .navigator__content-page.active
+                                        .navigator__list
+                                            .navigator__list-title(onclick="this.parentNode.classList.toggle('active')") Срок со дня государственной регистрации СМСП не превышает 1 года
+                                            .navigator__list-content
+                                                .navigator__link
+                                                    .navigator__link-title Займы на льготных условиях
+                                                    a(href="#").navigator__link-button
+                                                .navigator__link
+                                                    .navigator__link-title Предоставление гарантийных поручительств
+                                                    a(href="#").navigator__link-button
+                                                .navigator__sublist-first
+                                                    .navigator__sublist-first-title Субсидии, предоставляемые Министерством инвестиций и предпринимательства Камчатского края
+                                                    .navigator__sublist-first-content 
+                                                        .navigator__sublist-second
+                                                            .navigator__sublist-second-title(onclick="this.parentNode.classList.toggle('active')") Строительство
+                                                            .navigator__sublist-second-content
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия на создание малой инновационной компании
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия на возмещение затрат на модернизацию производства товаров (работ, услуг) 
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия на осуществление деятельности на "Дальневосточном гектаре
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия субъектам малого предпринимательства, обеспечивающим занятость инвалидов
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия в целях возмещения части затрат, связанных с уплатой первого взноса (аванса) при заключении договора лизинга
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                        .navigator__sublist-second
+                                                            .navigator__sublist-second-title(onclick="this.parentNode.classList.toggle('active')") Сельское хозяйство
+                                                            .navigator__sublist-second-content
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия на создание малой инновационной компании
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия на возмещение затрат на модернизацию производства товаров (работ, услуг) 
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия на осуществление деятельности на "Дальневосточном гектаре
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия субъектам малого предпринимательства, обеспечивающим занятость инвалидов
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия в целях возмещения части затрат, связанных с уплатой первого взноса (аванса) при заключении договора лизинга
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                        .navigator__sublist-second
+                                                            .navigator__sublist-second-title(onclick="this.parentNode.classList.toggle('active')") Инфраструктура  туризма
+                                                            .navigator__sublist-second-content
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия на создание малой инновационной компании
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия на возмещение затрат на модернизацию производства товаров (работ, услуг) 
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия на осуществление деятельности на "Дальневосточном гектаре
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия субъектам малого предпринимательства, обеспечивающим занятость инвалидов
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия в целях возмещения части затрат, связанных с уплатой первого взноса (аванса) при заключении договора лизинга
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                        .navigator__sublist-second
+                                                            .navigator__sublist-second-title(onclick="this.parentNode.classList.toggle('active')") Организация общественного питания
+                                                            .navigator__sublist-second-content
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия на создание малой инновационной компании
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия на возмещение затрат на модернизацию производства товаров (работ, услуг) 
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия на осуществление деятельности на "Дальневосточном гектаре
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия субъектам малого предпринимательства, обеспечивающим занятость инвалидов
+                                                                    a(href="#").navigator__sublist-second-link-button 
+                                                                .navigator__sublist-second-link 
+                                                                    span Субсидия в целях возмещения части затрат, связанных с уплатой первого взноса (аванса) при заключении договора лизинга
+                                                                    a(href="#").navigator__sublist-second-link-button 
+
+                                        .navigator__list
+                                            .navigator__list-title(onclick="this.parentNode.classList.toggle('active')") Срок со дня государственной регистрации СМСП  превышает 1 год
+                                            .navigator__list-content
+
+                                    .navigator__content-page
+                                        .navigator__request
+                                            .navigator__request-title Информационно-консультативная поддержка
+                                            a(href="#").navigator__request-link Подать заявку
+                                        .navigator__request
+                                            .navigator__request-title Бухгалтерские услуги
+                                            a(href="#").navigator__request-link Подать заявку
+                                        .navigator__request
+                                            .navigator__request-title Поддержка территориальных кластеров
+                                            a(href="#").navigator__request-link Подать заявку
+                                        .navigator__request
+                                            .navigator__request-title Регистрация бизнеса
+                                            a(href="#").navigator__request-link Подать заявку
+                                        .navigator__request
+                                            .navigator__request-title Поддержка социальных предпринимателей
+                                            a(href="#").navigator__request-link Подать заявку
+                                        .navigator__request
+                                            .navigator__request-title Организация выставочно-ярмарочной деятельности
+                                            a(href="#").navigator__request-link Подать заявку
+                                        .navigator__request
+                                            .navigator__request-title Сертификация и лицензирование продукции
+                                            a(href="#").navigator__request-link Подать заявку
+                                        .navigator__request
+                                            .navigator__request-title Образовательная поддержка
+                                            a(href="#").navigator__request-link Подать заявку
+                                        .navigator__request
+                                            .navigator__request-title Электронная цифровая подпись
+                                            a(href="#").navigator__request-link Подать заявку
+                                        .navigator__request
+                                            .navigator__request-title Продвижение на экспорт
+                                            a(href="#").navigator__request-link Подать заявку
+        include inc/footer.pug
+        include inc/scripts.pug

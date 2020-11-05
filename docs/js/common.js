@@ -10546,6 +10546,10 @@ __webpack_require__(335);
 
 __webpack_require__(338);
 
+var _tabs = __webpack_require__(338);
+
+var _tabs2 = _interopRequireDefault(_tabs);
+
 __webpack_require__(339);
 
 __webpack_require__(340);
@@ -10593,6 +10597,7 @@ __webpack_require__(344);
 })();
 
 document.addEventListener("DOMContentLoaded", function (e) {
+	(0, _tabs2.default)();
 
 	(0, _jquery2.default)('.search-btn, .search-btn--close').click(function () {
 		var $this = (0, _jquery2.default)(this);
@@ -10665,7 +10670,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 		}
 	});
 
-	console.log(1);
+	// console.log(1);
 
 	var swiperStorySuccess = new _swiper2.default(".story-success .swiper-container", {
 		slidesPerView: 3,
@@ -30298,6 +30303,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 "use strict";
 
 
+exports.__esModule = true;
+exports.default = initTabs;
+
 var _jquery = __webpack_require__(29);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -30305,20 +30313,59 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _jquery2.default)(function (_) {
-	(0, _jquery2.default)(".tabs-tab").click(function () {
-		var $this = (0, _jquery2.default)(this);
+    (0, _jquery2.default)(".tabs-tab").click(function () {
 
-		if ($this.hasClass("active")) return;
+        var $this = (0, _jquery2.default)(this);
 
-		var id = $this.attr("data-id"),
-		    $parent = $this.closest(".tabs");
+        if ($this.hasClass("active")) return;
 
-		$parent.find(".tabs-tab.active, .tabs-content.active").removeClass("active");
+        var id = $this.attr("data-id"),
+            $parent = $this.closest(".tabs");
 
-		$this.addClass("active");
-		$parent.find(".tabs-content[data-id='" + id + "']").addClass("active");
-	});
+        $parent.find(".tabs-tab.active, .tabs-content.active").removeClass("active");
+
+        $this.addClass("active");
+        $parent.find(".tabs-content[data-id='" + id + "']").addClass("active");
+    });
 });
+
+function initTabs() {
+    var allTabs = document.querySelectorAll('[data-tabs]');
+    // const tabsSelects = document.querySelectorAll('[data-select-tabs]');
+    if (allTabs || tabsSelects) {
+        allTabs.forEach(function (tabs) {
+            var arr = Array.from(tabs.children);
+            var tabPages = document.querySelectorAll("." + tabs.getAttribute('data-tabs') + " > *");
+            arr.forEach(function (elem) {
+                elem.addEventListener('click', function () {
+                    // remove кнопки
+                    arr.forEach(function (e) {
+                        return e.classList.remove('active');
+                    });
+
+                    // remove Вкладки
+                    tabPages.forEach(function (item) {
+                        return item.classList.remove('active');
+                    });
+
+                    // add Кнопка
+                    elem.classList.add('active');
+                    // add вкладка
+                    tabPages[elem.getAttribute('data-tab-page')].classList.add('active');
+                });
+            });
+        });
+        // tabsSelects.forEach((select) => {
+        //     const tabPages = document.querySelectorAll(`.${select.getAttribute('data-select-tabs')} > *`);
+        //     select.addEventListener('change', () => {
+        //         // remove Вкладки
+        //         tabPages.forEach(item => item.classList.remove('active'));
+        //         // add вкладка
+        //         tabPages[select.options[select.selectedIndex].getAttribute('data-tab-page')].classList.add('active');
+        //     })
+        // })
+    }
+}
 
 /***/ }),
 
