@@ -19,6 +19,30 @@ window.is = is;
 require("./countTo.js");
 require("../css/jquery.fancybox.css");
 
+
+// открытие пункта после перехода на страницу. Для навигатора
+document.addEventListener("DOMContentLoaded", () => {
+	const url = document.URL
+	const index = url.indexOf('#')
+
+	console.log('common.js, load to anchor')
+
+	if(index != -1){
+		let id = url.slice(index + 1, index + 5)
+
+		const element = document.querySelector(`[data-id = "${id}"]`)
+
+		element.scrollIntoView({
+			behavior: 'smooth'
+		});
+
+		//  ох уж этот jquery
+		let jqueryElement = $(`[data-id = "${id}"]`)
+		jqueryElement.toggleClass('js__open')
+		jqueryElement.find('.accordion__item-bot').slideToggle()
+	}
+})
+
 ;(function() {
 
   // проверяем поддержку
