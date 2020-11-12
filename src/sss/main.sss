@@ -825,15 +825,17 @@
 	@media (max-width: 660px)
 		padding-top: 40px
 	&__content
-		display: flex
-		align-items: center
 		width: 100%
-		@media (max-width: 860px)
-			flex-wrap: wrap
+		display: grid
+		grid-template-columns: repeat(auto-fill, minmax(420px, 1fr))
+		grid-gap: 20px
+		@media (max-width: 500px)
+			grid-template-columns: repeat(auto-fill, minmax(285px, 1fr))
 		& a
-			height: 123px
+			height: 80px
 			text-decoration: none
 			font-size: 20px
+			line-height: 23px
 			color: #623B2A
 			background: #F3F6F9
 			border-radius: 5px
@@ -852,8 +854,3 @@
 				margin-left: 10px
 				align-self: flex-end
 				height: calc(100% - 16px)
-			&:not(:last-of-type)
-				margin-right: 20px
-				@media (max-width: 860px)
-					margin-right: 0
-					margin-bottom: 25px
