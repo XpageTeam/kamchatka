@@ -1,0 +1,29 @@
+#policy-form
+    display: none
+    max-width: 600px
+    padding: 45px 25px 35px
+    & .default-input
+        
+        flex-direction: row-reverse
+        @media(max-width: 530px)
+            flex-direction: column-reverse
+        & input
+            width: 100%
+            max-width: 270px
+            margin-left: 20px
+            @media(max-width: 530px)
+                margin-left: 0
+                max-width: unset
+    & .form__inputs
+        margin-top: 10px
+    & .form__text
+        margin: 35px 0
+        border: 1px solid #e4eaf0
+        padding: 5px
+        border-radius: 5px
+        max-height: 180px
+        overflow: auto
+    & .form__submit-btn
+        margin: 0 auto
+        & input
+            text-align: center

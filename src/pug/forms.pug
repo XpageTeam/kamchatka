@@ -38,6 +38,36 @@ html(lang="ru")
 							.forms-submit-cont
 								input(type="submit" value="Преобразовать").forms__submit.btn
 
+					a.form-button(data-fancybox, href="#policy-form") открыть
+					#policy-form.form__container
+						.form__inputs
+							.form__inputs-input
+								.default-input
+									input.default-input__input.required(placeholder='ФИО')
+									label
+										span Я, субъект персональных данных
+										span.required *
+									.default-input__error
+							.form__inputs-input
+								.default-input
+									input.default-input__input.required(placeholder='Адрес регистрации')
+									label
+										span Зарегистрирован(а)
+										span.required *
+									.default-input__error
+							.form__inputs-input
+								.default-input
+									input.default-input__input.required(placeholder='Серия и номер паспорта, кем и когда выдан')
+									label
+										span Паспортные данные
+										span.required *
+									.default-input__error
+						.form__text
+							p Lorem ipsumbitis delectus dicta enim est eveniet excepturi expedita facilis inventore iste, labore laboriosam magnam neque numquam officiis praesentium quaerat qui quisquam repudiandae, sint. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium distinctio eveniet impedit ipsum itaque laborum magni, modi molestias nam officia possimus soluta, temporibus. Architecto!
+						.form__submit
+							.form__submit-btn
+								input.default-btn.btn(value="Отправить")
+
 
 
 								
