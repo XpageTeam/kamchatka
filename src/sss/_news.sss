@@ -1,17 +1,17 @@
-@supports (display: grid)
-	.news
 
-		&__list
-			display: grid
-			grid-gap: 50px
-			grid-template-columns: repeat(3,1fr)
+.news
 
-		&-slider-container
-			grid-column: span 2
-			margin-bottom: 0 !important
+	&__list
+		display: grid
+		grid-gap: 50px
+		grid-template-columns: repeat(3,1fr)
 
-			.swiper-arrow:before
-				border-color: #000
+	&-slider-container
+		grid-column: span 2
+		margin-bottom: 0 !important
+
+		.swiper-arrow:before
+			border-color: #000
 
 .main
 	.news
@@ -132,6 +132,7 @@
 
 		&-img
 			width: 100%
+			margin-bottom: 10px
 
 			img
 				display: block
@@ -216,23 +217,34 @@
 			margin-left: 30px
 			width: calc(100% - 30px) !important
 
-		
 	.news
-		&__list 
-			display: flex
-			flex-wrap: wrap
-			margin: 0 0 -30px -30px
 
-		&__item
-			width: calc((100% - 30px * 2) / 2)
-			margin: 0 0 30px 30px
+		&__list
+			grid-gap: 20px
+
+		
 
 @media screen and (max-width: 1000px)
 
 	.news__item-info
 		padding: 20px
 
+	.news
+
+		&__list
+			grid-template-columns: repeat(2,1fr)
+
 @media screen and (max-width: 667px)
+
+	.news
+
+		&__list
+			grid-template-columns: 100%
+
+		&__item
+
+			img
+				width: 100%
 
 	.tags-mobile
 		display: none

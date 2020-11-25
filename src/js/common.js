@@ -105,7 +105,11 @@ document.addEventListener("DOMContentLoaded", e => {
 	require("./jquery.fancybox.js");
 	let swiperMainbanner = new Swiper(".main-slider .swiper-container", {
 
+
 		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		  },
 		a11y:{
 			enabled: document.body.classList.contains("special__body")
 		},
