@@ -107,16 +107,20 @@ document.addEventListener("DOMContentLoaded", e => {
 
 
 		effect: "fade",
+
 		fadeEffect: {
 			crossFade: true
 		  },
+
 		a11y:{
 			enabled: document.body.classList.contains("special__body")
 		},
 		slidesPerView: 1,
 		loop: true,
 		roundLengths: true,
-		autoplay: true,
+		autoplay: {
+			delay: 5000,
+		},
 		pagination: {
 			el: ".swiper-pagination",
 			type: "fraction",
