@@ -1,0 +1,129 @@
+.subjects
+	&__list
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		gap: 30px
+		padding-top: 40px
+
+		@media screen and ( max-width: 1060px )
+			padding-top: 10px
+
+		@media screen and ( max-width: 960px )
+			grid-template-columns: repeat(2, 1fr)
+
+		@media screen and ( max-width: 720px )
+			grid-template-columns: 1fr
+			gap: 20px
+
+
+	&-card
+		height: 100%
+		position: relative
+		background-color: var(--backgroundColor)
+		border-radius: 5px
+		border: 1px solid var(--borderColor)
+		padding: 30px
+		min-height: 260px
+		overflow: hidden
+
+		@media screen and ( max-width: 1060px )
+			padding: 30px 20px
+
+		@media screen and ( max-width: 960px )
+			min-height: 200px
+			padding-top: 20px
+
+		&:hover
+			.subjects-card__list
+				transform: translate(0,0)
+
+			.subjects-card__title
+				opacity: 0.6
+
+		&__link
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: block
+			z-index: 1
+
+			~ .subjects-card__title
+				&::after
+					content: ''
+					display: inline-block
+					position: relative
+					width: 14px
+					height: 14px
+					margin-left: 5px
+					background-image: url('../img/more.svg')
+					background-repeat: no-repeat
+					background-position: center
+					top: -2px
+
+		&__icon
+			margin-bottom: 20px
+			width: 100px
+			height: 93px
+
+			@media screen and ( max-width: 1060px )
+				margin-bottom: 10px
+				width: 80px
+				height: 70px
+
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: contain
+
+		&__title
+			font-size: 18px
+			line-height: 1.6
+			transition: opacity .4s ease
+
+			@media screen and ( max-width: 1360px )
+				font-size: 16px
+
+			@media screen and ( max-width: 1060px )
+				font-size: 14px
+
+		&__list
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: #fff
+			padding: 30px
+			overflow: auto
+			-webkit-overflow-scrolling: touch
+			transform: translate(0, 100%)
+			transition: transform .5s ease
+
+			@media screen and ( max-width: 1060px )
+				padding: 30px 20px
+
+			&::-webkit-scrollbar 
+				width: 10px
+
+			&::-webkit-scrollbar-track
+				border-radius: 0
+				background: var(--backgroundColor)
+				border-left: 5px solid #fff
+
+			&::-webkit-scrollbar-thumb 
+				border-radius: 0
+				background: var(--borderColor)
+				border-left: 5px solid #fff
+
+		&__item
+			margin-bottom: 12px
+
+			a
+				text-decoration: none
+				transition: opacity .4s ease
+
+				&:hover
+					opacity: 0.6

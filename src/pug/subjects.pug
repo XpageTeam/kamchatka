@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Субъекты инфраструктуры поддержки МСП
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		main#content
+			.wrapper
+				.content
+					.title-block__cont
+						.title-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									span.bread-crumbs__this Субъекты инфраструктуры поддержки МСП
+							.title-block__title
+								h1 Организации инфраструктуры поддержки МСП
+					.content-main-cont
+						.content-main
+							.subjects
+								.subjects__list 
+									.subjects__item 
+										<!--есть список с центрами со ссылками-->
+										.subjects-card
+											.subjects-card__icon 
+												img(src="img/subjects-1.svg", alt="" loading="lazy")
+											.subjects-card__title Камчатский центр поддержки предпринимательства 
+											.subjects-card__list 
+												.subjects-card__item 
+													a(href="#") Центр поддержки предпринимательства
+												.subjects-card__item
+													a(href="#") Центр инноваций социальной сферы
+												.subjects-card__item
+													a(href="#") Центр кластерного развития
+									each subjects, i in ['Микрокредитная компания Камчатский государственный фонд поддержки предпринимательства', 'Гарантийный фонд развития предпринимательства Камчатского края', 'Центр поддержки экспорта Камчатского края', 'МФЦ для бизнеса']
+										.subjects__item 
+											<!--нет списка с центрами, но есть ссылка одна-->
+											.subjects-card
+												a.subjects-card__link(href="#")
+												.subjects-card__icon 
+													img(src="img/subjects-"+(i+2)+".svg", alt="" loading="lazy")
+												.subjects-card__title=subjects
+
+		include inc/footer.pug
+		include inc/scripts.pug
