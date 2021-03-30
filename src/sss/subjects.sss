@@ -1,5 +1,6 @@
 .subjects
 	&__list
+		width: 100%
 		display: grid
 		grid-template-columns: repeat(3, 1fr)
 		gap: 30px
@@ -127,3 +128,118 @@
 
 				&:hover
 					opacity: 0.6
+
+.subjects-inner
+	&__list
+		padding-top: 30px
+		width: 100%
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		gap: 30px 60px
+
+		@media screen and ( max-width: 1360px )
+			padding-top: 20px
+			gap: 20px 40px
+
+		@media screen and ( max-width: 1060px )
+			padding-top: 10px
+			gap: 10px 30px
+
+		@media screen and ( max-width: 960px )
+			padding-top: 0
+			grid-template-columns: 1fr
+			gap: 0
+
+	&__item
+		padding: 30px 0 60px
+		border-bottom: 1px solid var(--borderColor)
+		display: flex
+		align-items: center
+
+		@media screen and ( max-width: 1360px )
+			padding: 20px 0 40px
+
+		@media screen and ( max-width: 1060px )
+			padding: 20px 0 30px
+
+		@media screen and ( max-width: 960px )
+			padding: 15px 0
+
+		@media screen and ( max-width: 380px )
+			flex-direction: column
+
+	&__title
+		flex: 1 1 auto
+		font-size: 18px
+
+		@media screen and ( max-width: 1360px )
+			font-size: 16px
+
+		@media screen and ( max-width: 1060px )
+			font-size: 14px
+
+		@media screen and ( max-width: 420px )
+			font-size: 12px
+
+		@media screen and ( max-width: 380px )
+			margin-bottom: 10px
+
+	&__btns
+		flex: none
+		margin-left: 15px
+		display: flex
+		align-items: center
+
+		@media screen and ( max-width: 380px )
+			margin-left: auto
+
+		a
+			display: block
+			margin-left: 15px
+			width: 40px
+			height: 40px
+			border-radius: 5px
+			transition: filter .4s ease
+
+			@media screen and ( max-width: 960px )
+				width: 30px
+				height: 30px
+
+			&:hover
+				filter: brightness(0.85)
+
+			&.search-link
+				border: 1px solid var(--borderColor)
+				background-image: url('../img/search.svg')
+				background-repeat: no-repeat
+				background-position: center
+
+			&.download-link
+				border: 1px solid transparent
+				background-color: var(--secondColor)
+				background-image: url('../img/download.svg')
+				background-repeat: no-repeat
+				background-position: center
+
+	.load-more
+		text-align: center
+		margin-top: 60px
+
+		@media screen and ( max-width: 960px )
+			margin-top: 30px
+
+.btn.btn-load
+	display: inline-flex
+	align-items: center
+	justify-content: center
+
+	&::after
+		content: ''
+		position: relative
+		display: block
+		width: 14px
+		height: 14px
+		margin-left: 14px
+		background-image: url('../img/load.svg')
+		background-repeat: no-repeat
+		background-position: center
