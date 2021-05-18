@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Мероприятие
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.event
+		include inc/header.pug
+		main#content
+			.event-page 
+				.event-page__banner
+					.event-page__banner-img 
+						img(src="img/photos/standart-slider-img.jpg", alt="" loading="lazy")
+					.event-page__banner-text 
+						.event-page__banner-title «Неделя предпринимательства 2021» с Центром «Мой бизнес»
+						.event-page__banner-logo
+							img(src="img/logo-w.svg", alt="" loading="lazy")
+				.event-page__section.personal 
+					.wrapper
+						.event-page__personal
+							.event-page__personal-img 
+								img(src="img/photos/personal.jpg", alt="")
+							.event-page__personal-desc 
+								.event-page__personal-name Юлия Богаевская
+								.event-page__personal-position Директор АНО «Камчатский центр поддержки предпринимательства»
+							.event-page__personal-text
+								p День предпринимателя – одно из ключевых событий 2021 года, направленное на формирование предпринимательской культуры и развитие предпринимательского потенциала молодежи Камчатского края. В честь этого Центр «Мой бизнес» подготовил обширную познавательную программу для потенциальных и действующих предпринимателей края. Наша цель - объединение опытных бизнесменов и молодых людей, интересующихся предпринимательством, для обмена идеями и знаниями, позволяющими начать и развить собственное дело. Приглашаем к участию в мероприятиях!
+				.event-page__section.programm.event-page__section--color 
+					.wrapper
+						.event-page__title Программа 
+						.event-page__programm
+							.event-page__programm-item
+								.event-page__programm-left
+									.event-page__programm-label Четверг
+									.event-page__programm-date 20 мая
+								.event-page__programm-right 
+									.event-page__programm-event Личный прием Министра инвестиций, промышленности и предпринимательства Камчатского края
+									.event-page__programm-event Мастер-класс по продвижению в социальных сетях
+									.event-page__programm-event Совместный прямой эфир с представителями крупнейших банков
+									.event-page__programm-event Открытый урок в школе с участием предпринимателей
+							.event-page__programm-item
+								.event-page__programm-left
+									.event-page__programm-label Пятница
+									.event-page__programm-date 21 мая
+								.event-page__programm-right 
+									.event-page__programm-event Личный прием Министра образования Камчатского края
+									.event-page__programm-event Круглый стол по КНД (можно пригласить Коростелева Д.А. как модератора, контролирующие органы)
+									.event-page__programm-event Совместный прямой эфир с представителями крупнейших банков
+									.event-page__programm-event Тренинг «Генерация бизнес-идеи»
+									.event-page__programm-event Открытый урок в школе с участием предпринимателей
+							.event-page__programm-item
+								.event-page__programm-left
+									.event-page__programm-label Суббота
+									.event-page__programm-date 22 мая
+								.event-page__programm-right 
+									.event-page__programm-event Бизнес-квиз для школьников/студентов 
+									.event-page__programm-event Высадка аллеи предпринимателей 
+							.event-page__programm-item
+								.event-page__programm-left
+									.event-page__programm-label Воскресенье
+									.event-page__programm-date 24 мая
+								.event-page__programm-right 
+									.event-page__programm-event Личный прием Министра социального благополучия Камчатского края
+									.event-page__programm-event Совместный прямой эфир с представителями крупнейших банков
+									.event-page__programm-event Открытый урок в школе с участием предпринимателей
+									.event-page__programm-event Мастер-класс
+				.event-page__section.registration 
+					.wrapper
+						.event-page__registration
+							.event-page__registration-left
+								.event-page__title Регистрация открыта до 19 мая
+							.event-page__registration-right
+								a.btn(href="#") Скачать программу
+								a.btn(href="#") Стать участником
+				.event-page__section.contacts.event-page__section--bottom
+					.wrapper
+						.event-page__title Контакты
+						.event-page__contacts
+							.event-page__contacts-item
+								.event-page__contacts-label
+									img(src="img/ico-location.svg", alt="")
+									span Адрес:
+								.event-page__contacts-text
+									p г. Петропавловск-Камчатский, <br>пр. Карла Маркса д. 23 оф. 104
+							.event-page__contacts-item
+								.event-page__contacts-label
+									img(src="img/ico-phone.svg", alt="")
+									span Телефоны
+								.event-page__contacts-text
+									a(href="tel:+74152202800") +7 (4152) 202-800
+									br
+									a(href="tel:+74152206800") +7 (4152) 206-800
+							.event-page__contacts-item
+								.event-page__contacts-label
+									img(src="img/ico-email.svg", alt="")
+									span E-mail:
+								.event-page__contacts-text 
+									a(href="mailto:kamcpp@mail.ru") kamcpp@mail.ru
+								.soc
+									a.soc__link(href="#") 
+										img(src="img/inst-w.svg")
+									a.soc__link(href="#") 
+										img(src="img/fb-w.svg")
+				.event-page__sticker 
+					.wrapper 
+						.event-sticker 
+							.event-sticker__cont 
+								.event-sticker__city г. Петропавловск - Камчатский
+								.event-sticker__name Центр «Мой бизнес», 20 – 26 мая 2021 года
+							.event-sticker__btn 
+								a.btn(href="#") Стать участником
+							.event-sticker__close
+
+		include inc/scripts.pug

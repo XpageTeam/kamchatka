@@ -1,0 +1,63 @@
+.event-reg
+	padding: 80px 70px
+	background: var(--backgroundColor)
+	margin-bottom: 120px
+
+	@media screen and ( max-width: 960px )
+		padding: 40px 30px
+		margin-bottom: 80px
+
+	@media screen and ( max-width: 640px )
+		padding: 0
+		background: transparent
+		margin-top: 30px
+
+	.form__submit
+		margin-top: 44px
+
+		&-text
+			color: #000
+			font-size: 13px
+			max-width: 450px
+
+	&__list
+		margin: 44px 0
+
+		&-label
+			margin-bottom: 30px
+
+			span
+				color: var(--secondColor)
+
+	&__item
+		&:not(:last-child)
+			margin-bottom: 35px
+
+		&-title
+			font-weight: 600
+			letter-spacing: 0.02em
+			color: var(--secondColor)
+			margin-bottom: 24px
+
+	.checkbox
+		+ .checkbox
+			margin-top: 16px
+
+		&__label
+			align-items: flex-start
+			@media screen and ( max-width: 640px )
+				font-size: 13px
+			&::before
+				background-color: #fff
+				border: 1px solid #DEE0E3
+				border-radius: 5px
+				size: 16px
+				margin-right: 12px
+				position: relative
+				top: 1px
+
+			&::after
+				width: 4px
+				height: 8px
+				top: 4px
+				left: 6px

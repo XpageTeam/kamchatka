@@ -39,6 +39,8 @@
 @import "docs.sss"
 @import "_policy-form.sss"
 @import "subjects.sss"
+@import "_event-reg.sss"
+@import "_event-page.sss"
 
 .bx-authform-content-container
 	margin: 10px 0 30px
@@ -859,3 +861,79 @@
 				margin-left: 10px
 				align-self: flex-end
 				height: calc(100% - 16px)
+
+.event-banner
+	margin-bottom: 50px
+	background: var(--mainColor)
+	color: #fff
+
+	&__cont
+		position: relative
+		display: grid
+		grid-template-columns: auto 36.5%
+		gap: 40px
+		max-width: 1920px
+		width: 100%
+		margin-left: auto
+		margin-right: auto
+
+		@media screen and ( max-width: 1040px )
+			grid-template-columns: 1fr 1fr
+
+		@media screen and ( max-width: 720px )
+			grid-template-columns: 1fr
+			gap: 20px
+
+	&__link
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		display: block
+		z-index: 1
+
+	&__img
+		height: auto
+		position: relative
+		min-height: 200px
+		overflow: hidden
+
+		img
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+
+	&__desc
+		padding: 24px 0
+
+		@media screen and ( max-width: 720px )
+			padding: 0 2rem 24px
+
+		@media screen and ( max-width: 667px )
+			padding: 0 20px 24px
+
+	&__date
+		font-size: 14px
+		font-weight: 300
+		margin-bottom: 8px
+
+	&__title
+		font-size: 22px
+		font-weight: 600
+		max-width: 380px
+		width: 100%
+
+		@media screen and ( max-width: 720px )
+			font-size: 18px
+
+	&__btn
+		margin-top: 30px
+
+		@media screen and ( max-width: 720px )
+			margin-top: 20px
